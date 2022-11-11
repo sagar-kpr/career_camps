@@ -3,7 +3,9 @@ const cookieParser = require('cookie-parser');
 const port = 3000;
 const db = require('./config/mongoose');
 const MySession = require('express-session'); 
+const mongostore = require('connect-mongo');
 const passport = require('passport');
+
 const PassportLocal = require('./config/passport_local');
 const app = express();
 const parser = require('body-parser');
@@ -36,13 +38,16 @@ app.use(MySession({
     resave: false,
     cookie:{
         maxAge: (1000*60*100)
-    }
+    },
+    store : mongostore.create({
+        mongoUrl : 'mongodb://localhost/students',
+        autoRemove: 'disabled'
+    })
 }));
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use(passport.setAuthenticatedUser());
+app.use(passport.setAuthenticatedUser);
 
 //use router
 app.use('/', require('./routes/index'));
