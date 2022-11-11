@@ -1,0 +1,107 @@
+main {
+  background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(#032d6b, #032d6b), linear-gradient(to left bottom, #032d6b 50%, #faf7f2 0px), linear-gradient(to right bottom, #032d6b 50%, #faf7f2 0px);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main #animate-image {
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  transition: all 3s ease-in-out 3s;
+  animation: move 3s ease-in-out infinite;
+}
+
+main #animate-image img {
+  width: 60%;
+  height: 60%;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+main #login-box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+main #login-box #login-form {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main #login-box #login-form form {
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  line-height: 2;
+  padding: 5px;
+}
+
+main #login-box #login-form form input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+}
+
+main #login-box #login-form form input:focus {
+  outline: none;
+}
+
+main #login-box #login-form form button {
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f96b24;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+main #login-box #login-form form button:hover {
+  background-color: #c24a0e;
+}
+
+main #login-box #login-form p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+main #login-box #login-form p a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+main #login-box #login-form p a:hover {
+  color: gray;
+}

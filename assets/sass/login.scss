@@ -1,0 +1,103 @@
+main{
+    background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(rgb(3, 45, 107), rgb(3, 45, 107)), linear-gradient(to left bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px), linear-gradient(to right bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    #animate-image{
+        width: 50%;
+        height: 100%;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        transition: all 3s ease-in-out 3s ;
+        animation: move 3s ease-in-out infinite ;
+        img{
+            width:60%;
+            height: 60%;
+
+        }
+    }
+    @keyframes move {
+        from{
+            transform: translateY(30px);
+        }
+        to{
+            transform: translateY(0px);
+        }
+        
+        
+    }
+
+    #login-box{
+        width: 50%;
+        height: 100%;
+        //border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        color: white;
+        #login-form{
+            width:80%;
+            height: 50%;
+            //border: 1px solid white;
+            display: flex;
+            text-align: center;
+            
+            flex-direction: column;
+            justify-content: center;
+            form{
+                width: auto;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                //border: 1px solid white;
+                row-gap: 20px;
+                line-height: 2;
+                padding: 5px;
+                input{
+                    width:70%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 17px;
+                }
+                input:focus{
+                    outline: none;
+                }
+                button{
+                    width: 120px;
+                    height: 40px;
+                    color: white;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background-color: #f96b24;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                button:hover{
+                    background-color: #c24a0e;
+                }
+            }
+            p{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    cursor: pointer;
+                }
+                a:hover{
+                    color: gray;
+                }
+            }
+        }
+    }
+
+}
