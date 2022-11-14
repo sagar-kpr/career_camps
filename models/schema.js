@@ -5,8 +5,8 @@ const student_schema = new mongoose.Schema({
         type : String,
         required: true
     },
-    id : {
-        type : String,
+    userId : {
+        type : Number,
         required: true,
         unique : true
     },

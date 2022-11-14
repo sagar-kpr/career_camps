@@ -10,8 +10,9 @@ module.exports.login = function(req,res){
 }
 
 //create session for login user and give them access to home page
-module.exports.session = function(req,res){
+module.exports.session =  function(req,res){
     return res.redirect('/home');
+
 }
 
 // rendring the registration page
@@ -28,7 +29,7 @@ module.exports.createUser = function(req,res){
         return res.redirect('back');
     }
    
-    User.findOne({id:req.body.id}, function(err,user) {
+    User.findOne({userId:req.body.userId}, function(err,user) {
         if(err) { console.log('err in finding id'); return }
         if(!user){
             User.create(req.body , function(err,user) {
@@ -43,8 +44,20 @@ module.exports.createUser = function(req,res){
     })
 }
 
+//rendering home page
+module.exports.home = async function(req,res){
+    let user = await User.findOne({userId:req.body.userId});
 
-module.exports.home = function(req,res){
-    
-    return res.render('home')
+    return res.render('home',{
+        user: user
+    })
+
+}
+
+//destroy session
+module.exports.destroy = function(req,res){
+    req.logout(function(err){
+        if(err) { console.log('err in logout', err); return }
+        return res.redirect('/')
+    });
 }

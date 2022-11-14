@@ -26,18 +26,20 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
-        p{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            a{
-                text-decoration: none;
-                color: white;
+        form{
+            input{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                font-weight: 600;
                 cursor: pointer;
+                background: transparent;
+                color: white;
             }
-            a:hover{
+            input:hover{
                 color: gray;
             }
         }
+        
+        
     }
 }

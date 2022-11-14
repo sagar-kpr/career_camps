@@ -32,18 +32,15 @@ header #log-out {
   justify-content: center;
 }
 
-header #log-out p {
+header #log-out form input {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 600;
-}
-
-header #log-out p a {
-  text-decoration: none;
-  color: white;
   cursor: pointer;
+  background: transparent;
+  color: white;
 }
 
-header #log-out p a:hover {
+header #log-out form input:hover {
   color: gray;
 }
