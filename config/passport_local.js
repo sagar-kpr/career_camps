@@ -3,33 +3,44 @@ const LocalStrategy = require('passport-local').Strategy;
 const User  = require('../models/schema');
 
 
-passport.use(new LocalStrategy({
-    usernameField: 'id'
-}, async function(userId, password, done){
-    let user = await User.findOne({id: userId});
+passport.use(new LocalStrategy(
+    {
+        usernameField: 'id'
+    },
+    function(id, password, done){
+        User.findOne({id:id}, function(err,user){
+            if(err) { 
+                return done(err) 
+            }
+            if(user){
+                if(user.password != password){
+                    return done(null, false);
+                }else{
+                    return done(null, user);
+                }
+            }else{
+                return done(null, false);
+            }
 
-    if(user){
-        if(user.password != password){
-            return done(null, false)
-        }
-        return done(null, user)
+        });
+
     }
-
-    return done(null, false)
-}));
+));
 
 
 passport.serializeUser(function(user,done){
     return done(null, user.id);
 });
 
-passport.deserializeUser( async function(id, done){
-    let user = await User.findById(id);
-
-    if(user){
-        return done(null, user);
-    }
+passport.deserializeUser(function(id,done){
+    User.findById(id, function(err,user){
+        if(err) { return done(err) }
+        
+        return done(null,user);
+    });
 });
+
+
 
 
 passport.checkAuthentication = function(req,res,next){

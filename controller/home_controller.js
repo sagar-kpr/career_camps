@@ -6,30 +6,17 @@ module.exports.login = function(req,res){
         return res.redirect('/home');
     }
     return res.render('login')
-    /*if(req.cookies.user_id){
-        return res.redirect('/home');
-    }
-    return res.render('login')*/
+
 }
 
 //create session for login user and give them access to home page
-module.exports.session = async function(req,res){
-    let user = await User.findOne({id:req.body.id});
-    if(user){
-       if(user.password != req.body.password){
-            return res.redirect('back');
-       } 
-        res.cookie('user_id', user._id)
-        return res.redirect('/home');
-    }
-    return res.redirect('back');
-    
-    
+module.exports.session = function(req,res){
+    return res.redirect('/home');
 }
 
 // rendring the registration page
 module.exports.register = function(req,res){
-    if(req.cookies.user_id){
+    if(req.isAuthenticated()){
         return res.redirect('/home');
     }
     return res.render('register')
@@ -57,10 +44,7 @@ module.exports.createUser = function(req,res){
 }
 
 
-module.exports.home = async function(req,res){
-    let user = await User.findOne({id:req.body.id});
-
-    return res.render('home',{
-        user: user
-    })
+module.exports.home = function(req,res){
+    
+    return res.render('home')
 }

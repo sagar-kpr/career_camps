@@ -1,5 +1,5 @@
 const express = require('express');
-const cookieParser = require('cookie-parser');
+//const cookieParser = require('cookie-parser');
 const port = 3000;
 const db = require('./config/mongoose');
 const MySession = require('express-session'); 
@@ -19,7 +19,7 @@ app.use(sassMiddlware({
     outputStyle: 'expanded',
     prefix: '/css'
 }));
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(parser.urlencoded({extended: false}));
 app.use(express.static('./assets'));
 app.use(expressLayout);
@@ -41,8 +41,7 @@ app.use(MySession({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use(passport.setAuthenticatedUser());
+app.use(passport.setAuthenticatedUser);
 
 //use router
 app.use('/', require('./routes/index'));
