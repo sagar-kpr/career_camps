@@ -1,5 +1,248 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
 main {
   width: 100%;
   height: 100%;
-  background-color: antiquewhite;
+  background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(#032d6b, #032d6b), linear-gradient(to left bottom, #032d6b 50%, #faf7f2 0px), linear-gradient(to right bottom, #032d6b 50%, #faf7f2 0px);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main #add-btn {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+main #add-btn p a {
+  background-color: #f96b24;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data {
+  width: 97%;
+}
+
+main #add-btn .form-data #form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #add-btn .form-data #form-box form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+main #add-btn .form-data #form-box form #student-info {
+  width: 50%;
+}
+
+main #add-btn .form-data #form-box form #student-info .common {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+main #add-btn .form-data #form-box form #student-info .common label {
+  width: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data #form-box form #student-skills {
+  width: 50%;
+}
+
+main #add-btn .form-data #form-box form #student-skills .common {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+main #add-btn .form-data #form-box form #student-skills .common label {
+  width: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data #form-box form #student-skills .common button {
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  margin-left: 25%;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .students {
+  width: 80%;
+  height: 80%;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body {
+  display: flex;
+  flex-direction: column;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #details {
+  width: 100%;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #details p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 2px;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 2px;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv {
+  width: 84%;
+  background: white;
+  height: 100px;
+  position: relative;
+  display: flex;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder {
+  width: 30%;
+  height: 90%;
+  position: relative;
+  border-right: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  clip: rect(0, 80px, 80px, 40px);
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  clip: rect(0, 40px, 80px, 0);
+  background: #81CE97;
+  transform: rotate(60deg);
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 60px/2);
+  top: calc(50% - 60px/2);
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-percents span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #81CE97;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-percents .pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 {
+  background-color: #81CE97;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 .ppc-progress {
+  clip: rect(0, 40px, 80px, 0);
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 80px, 80px, 40px);
+  background: #E5E5E5;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #info #status {
+  width: 120px;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #info #interview {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #info #interview button {
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

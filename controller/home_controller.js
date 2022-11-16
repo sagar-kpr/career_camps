@@ -1,4 +1,5 @@
 const User = require('../models/schema');
+const StudentBasic = require('../models/student_basic_schema');
 
 //rendring the login page
 module.exports.login = function(req,res){
@@ -46,10 +47,10 @@ module.exports.createUser = function(req,res){
 
 //rendering home page
 module.exports.home = async function(req,res){
-    let user = await User.findOne({userId:req.body.userId});
+    let post = await StudentBasic.find({});
 
     return res.render('home',{
-        user: user
+        lists: post
     })
 
 }
@@ -61,3 +62,6 @@ module.exports.destroy = function(req,res){
         return res.redirect('/')
     });
 }
+
+
+

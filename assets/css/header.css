@@ -14,11 +14,17 @@ header #logo {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+}
+
+header #logo img {
+  width: 130px;
+  margin-top: 25px;
 }
 
 header #logo #hide {
   width: 100%;
-  height: 20px;
+  height: 10px;
   position: absolute;
   bottom: 0;
   background-image: linear-gradient(130deg, #222151 0%, #032D6B 100%);

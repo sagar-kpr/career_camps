@@ -1,5 +1,249 @@
+::-webkit-scrollbar {
+    width: 10px;
+  }
 main{
     width: 100%;
     height: 100%;
-    background-color: antiquewhite;
+    background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(rgb(3, 45, 107), rgb(3, 45, 107)), linear-gradient(to left bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px), linear-gradient(to right bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    #add-btn{
+        width:80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        p{
+            a{
+                background-color: #f96b24;
+                color: white;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+        }
+        .form-data{
+            width: 97%;
+            #form-box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                form{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    #student-info{
+                        width: 50%;
+                        .common{
+                            display: flex;
+                            flex-direction: row;
+                           
+                            padding: 5px;
+                            label{
+                                width:100px;
+                                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                            }
+                            
+                            
+                        }
+                    }
+                    #student-skills{
+                        width: 50%;
+                        .common{
+                            display: flex;
+                            flex-direction: row;
+                            padding: 5px;
+                            
+                            label{
+                                width:100px;
+                                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                            }
+                            button{
+                                width:auto;
+                                height: 40px;
+                                border-radius: 5px;
+                                background-color: green;
+                                color: white;
+                                border: none;
+                                margin-left: 25%;
+                                margin-top: 10px;
+                                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                            }
+                            
+                            
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+    }    
+    .students{
+        width:80%;
+        height: 80%;
+        overflow: scroll;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        
+        .accordion{
+            .accordion-item{
+                .accordion-collapse{
+                    .accordion-body{
+                        display: flex;
+                        flex-direction: column;
+                        #details{
+                            width:100%;
+                            p{
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                margin: 2px;
+                            }
+                        }
+                        #score-card{
+                            width:100%;
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 10px;
+                            p{
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                margin: 2px; 
+                            }
+                            #course{
+                                width:90%;
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                flex-direction: row;
+                                //@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+                                .progressDiv {
+                                    width: 84%;
+                                    background:white;
+                                    height: 100px;
+                                    
+                                    position: relative;
+                                    display: flex;
+                                    
+                                    
+                                    .statChartHolder {
+                                        width: 30%;
+                                        height: 90%;
+                                        position: relative;
+                                        border-right: 1px solid #ccc;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        .progress-pie-chart {
+                                            width:80px;
+                                            height: 80px;
+                                            border-radius: 50%;
+                                            background-color: #E5E5E5;
+                                            position: relative;
+                                            .ppc-progress {
+                                                content: "";
+                                                position: absolute;
+                                                border-radius: 50%;
+                                                left: calc(50% - 40px);
+                                                top: calc(50% - 40px);
+                                                width: 80px;
+                                                height: 80px;
+                                                clip: rect(0, 80px, 80px, 40px);
+                                                .ppc-progress-fill {
+                                                    content: "";
+                                                    position: absolute;
+                                                    border-radius: 50%;
+                                                    left: calc(50% - 40px);
+                                                    top: calc(50% - 40px);
+                                                    width: 80px;
+                                                    height: 80px;
+                                                    clip: rect(0, 40px, 80px, 0);
+                                                    background: #81CE97;
+                                                    transform: rotate(60deg);
+                                                  }
+                                            }
+                                            .ppc-percents {
+                                                content: "";
+                                                position: absolute;
+                                                border-radius: 50%;
+                                                left: calc(50% - 60px/2);
+                                                top: calc(50% - 60px/2);
+                                                width: 60px;
+                                                height: 60px;
+                                                background: #fff;
+                                                text-align: center;
+                                                display: table;
+                                                span {
+                                                    display: block;
+                                                    font-size: 1rem;
+                                                    font-weight: bold;
+                                                    color: #81CE97;
+                                                }
+                                                .pcc-percents-wrapper {
+                                                    display: table-cell;
+                                                    vertical-align: middle;
+                                                }
+                                                  
+                                            }
+                                              
+                                        }
+                                        .gt-50 {
+                                            background-color: #81CE97;
+                                            .ppc-progress {
+                                                clip: rect(0, 40px, 80px, 0);
+                                                .ppc-progress-fill {
+                                                    clip: rect(0, 80px, 80px, 40px);
+                                                    background: #E5E5E5;
+                                                  }
+                                            }
+                                        }
+                                        
+                                        
+                                    }
+                                        
+                                }
+                                
+                                
+                            }
+    
+                        }
+                        #info{
+                            width:100%;
+                            
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 10px;
+                            #status{
+                                width:120px;
+                                
+                            }
+                            #interview{
+                                width: 150px; 
+                                height: 40px;
+                               
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                button{
+                                    width:auto;
+                                    height: 40px;
+                                    border-radius: 5px;
+                                    background-color: green;
+                                    color: white;
+                                    border: none;
+                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                                }            
+
+                            }
+                        }
+                    }
+                        
+                }
+            }
+        }
+    }
+    
+
 }

@@ -10,11 +10,11 @@ console.log('router loaded');
 router.get('/', homeController.login );
 router.get('/Register', homeController.register );
 
-router.get('/home', passport.checkAuthentication ,homeController.home )
+
 
 router.post('/create',homeController.createUser );
 router.post('/session', passport.authenticate('local', {failureRedirect: '/'}) ,homeController.session );
 router.post('/destroy', homeController.destroy );
 
-
+router.use('/home', require('./home'));
 module.exports = router;
