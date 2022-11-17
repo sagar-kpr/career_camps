@@ -1,0 +1,78 @@
+::-webkit-scrollbar {
+    width: 10px;
+  }
+main{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(rgb(3, 45, 107), rgb(3, 45, 107)), linear-gradient(to left bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px), linear-gradient(to right bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    #add-btn{
+        width:80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        p{
+            a{
+                background-color: #f96b24;
+                color: white;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+        }
+        .form-data{
+            width: 97%;
+            #form-box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                form{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid red;
+                    #student-info{
+                        width: 50%;
+                        border: 1px solid red;
+                        .common{
+                            display: flex;
+                            flex-direction: row;
+                            padding: 5px;
+                            label{
+                                width:150px;
+                                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                            } 
+          
+                        }
+                    }
+                }
+                
+            }
+        }
+    }    
+    .students{
+        width:80%;
+        height: 80%;
+        overflow: scroll;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        .accordion{
+            .accordion-item{
+                .accordion-collapse{
+                    .accordion-body{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                        
+                }
+            }
+        }
+    }
+    
+
+}

@@ -146,59 +146,59 @@ main .students .accordion .accordion-item .accordion-collapse .accordion-body #s
   align-items: center;
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart {
-  width: 80px;
-  height: 80px;
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: #E5E5E5;
   position: relative;
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-progress {
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-progress, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-progress, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-progress {
   content: "";
   position: absolute;
   border-radius: 50%;
-  left: calc(50% - 40px);
-  top: calc(50% - 40px);
-  width: 80px;
-  height: 80px;
-  clip: rect(0, 80px, 80px, 40px);
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 100px, 100px, 50px);
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-progress .ppc-progress-fill {
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-progress .ppc-progress-fill1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-progress .ppc-progress-fill2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-progress .ppc-progress-fill3, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-progress .ppc-progress-fill1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-progress .ppc-progress-fill2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-progress .ppc-progress-fill3, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-progress .ppc-progress-fill1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-progress .ppc-progress-fill2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-progress .ppc-progress-fill3 {
   content: "";
   position: absolute;
   border-radius: 50%;
-  left: calc(50% - 40px);
-  top: calc(50% - 40px);
-  width: 80px;
-  height: 80px;
-  clip: rect(0, 40px, 80px, 0);
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 50px, 100px, 0);
   background: #81CE97;
   transform: rotate(60deg);
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-percents {
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents3, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents3, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents3 {
   content: "";
   position: absolute;
   border-radius: 50%;
-  left: calc(50% - 60px/2);
-  top: calc(50% - 60px/2);
-  width: 60px;
-  height: 60px;
+  left: calc(50% - 80px/2);
+  top: calc(50% - 80px/2);
+  width: 80px;
+  height: 80px;
   background: #fff;
   text-align: center;
   display: table;
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-percents span {
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents1 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents2 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents3 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents1 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents2 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents3 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents1 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents2 span, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents3 span {
   display: block;
   font-size: 1rem;
   font-weight: bold;
   color: #81CE97;
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart .ppc-percents .pcc-percents-wrapper {
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents1 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents2 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart1 .ppc-percents3 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents1 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents2 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart2 .ppc-percents3 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents1 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents2 .pcc-percents-wrapper, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .progress-pie-chart3 .ppc-percents3 .pcc-percents-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
@@ -208,11 +208,11 @@ main .students .accordion .accordion-item .accordion-collapse .accordion-body #s
 }
 
 main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 .ppc-progress {
-  clip: rect(0, 40px, 80px, 0);
+  clip: rect(0, 50px, 100px, 0);
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 .ppc-progress .ppc-progress-fill {
-  clip: rect(0, 80px, 80px, 40px);
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 .ppc-progress .ppc-progress-fill1, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 .ppc-progress .ppc-progress-fill2, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course .progressDiv .statChartHolder .gt-50 .ppc-progress .ppc-progress-fill3 {
+  clip: rect(0, 100px, 100px, 50px);
   background: #E5E5E5;
 }
 

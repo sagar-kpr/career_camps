@@ -1,0 +1,76 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(#032d6b, #032d6b), linear-gradient(to left bottom, #032d6b 50%, #faf7f2 0px), linear-gradient(to right bottom, #032d6b 50%, #faf7f2 0px);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main #add-btn {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+main #add-btn p a {
+  background-color: #f96b24;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data {
+  width: 97%;
+}
+
+main #add-btn .form-data #form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #add-btn .form-data #form-box form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+}
+
+main #add-btn .form-data #form-box form #student-info {
+  width: 50%;
+  border: 1px solid red;
+}
+
+main #add-btn .form-data #form-box form #student-info .common {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+main #add-btn .form-data #form-box form #student-info .common label {
+  width: 150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .students {
+  width: 80%;
+  height: 80%;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,84 @@
+
+
+<link rel="stylesheet" type="text/css" href="/css/interview.css"> 
+
+<main>
+    <div id="add-btn" >
+        <p>
+            <a class="btn rounded-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Create interview
+            </a>
+        </p>
+        <div class="collapse form-data" id="collapseExample">
+            <div class="card card-body  rounded-3" id="form-box">
+                <form action="/home/basicDetails" id="list-form" method="post">
+                  <div id="student-info">
+                    <div class="common">
+                      <label for="company">Company Name</label>
+                      <input type="text" placeholder="Company name" name="company"  required>
+                    </div>
+                    
+                    <div class="common">
+                      <label for="location">Location </label>
+                      <input type="text" placeholder="Location"  name="location" required>
+                    </div>
+  
+                    <div class="common">
+                      <label for="apply">Applied for </label>
+                      <input type="text" placeholder="Applied for"  name="apply" required>
+                    </div>
+
+                    <div class="common">
+                      <label for="date">Interview Date</label>
+                      <input type="date"  name="date" required>
+                    </div>
+                    
+                    <div class="common">
+                      <button type="submit">Add details</button>
+                    </div>
+                    
+                  </div>
+                </form>
+              </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="students ">
+        <div class="accordion accordion-flush  " id="accordionFlushExample">
+                <div class="accordion-item m-3 rounded-3 ">
+                  <h2 class="accordion-header" id="">
+                      <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush" aria-expanded="false" aria-controls="flush">
+                        
+                      </button>
+                  </h2>
+                  <div id="flush-" class="accordion-collapse  collapse" aria-labelledby="" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body ">
+                      <div id="details">
+                          <p>Batch <small></small></p>
+                          <p>Collage name :<small> </small> </p>
+                      </div>
+                      <div id="score-card">
+                          <p>Score card :</p>
+                      </div>  
+                      <div id="info">
+                          <div id="status">
+                          <p>Status :<small></small></p>
+                          </div>
+                          <div id="interview">
+                          <button type="button">Create interview</button>
+                          </div>
+                      </div>
+                      
+                      </div>
+                  </div>
+                </div>
+            
+        </div> 
+            
+    </div>
+    
+</main>
+
+<!-- <script src="/js/index.js"></script>
+<script src="/js/home_list.js"></script> -->
