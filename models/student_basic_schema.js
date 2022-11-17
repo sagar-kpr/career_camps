@@ -30,6 +30,10 @@ const student_basic_schema = new mongoose.Schema({
     react: {
         type: Number,
         required: true
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref : 'User'
     }
 
 },{

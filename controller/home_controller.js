@@ -34,7 +34,7 @@ module.exports.createUser = function(req,res){
         if(err) { console.log('err in finding id'); return }
         if(!user){
             User.create(req.body , function(err,user) {
-                if(err) { console.log('err in creating'); return }
+                if(err) { console.log('err in creating',err); return }
 
                 return res.redirect('/');
             });

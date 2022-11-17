@@ -13,8 +13,14 @@ const student_schema = new mongoose.Schema({
     password :{
         type : String,
         required: true
-    }
-})
+    },
+    students :[{
+        type : mongoose.Schema.Types.ObjectId,
+        ref : 'StudentBasic'
+    }]
+},{
+    timestamps: true
+});
 
 
 const User = mongoose.model('User', student_schema) ;
