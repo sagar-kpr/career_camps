@@ -86,6 +86,9 @@
                           <div id="course">
                             <div class="progressDiv">
                               <div class="statChartHolder">
+                                <div class="text">
+                                  <h5>DSA</h5>
+                                </div>
                                   <div class="progress-pie-chart1" data-percent="<%= list.dsa %>"><!--Pie Chart -->
                                       <div class="ppc-progress">
                                           <div class="ppc-progress-fill1"></div>
@@ -99,12 +102,18 @@
                                   
                               </div>
                               <div class="statChartHolder">
+                                <div class="text">
+                                  <h5>Web</h5>
+                                </div>
                                 <div class="progress-pie-chart2" data-percent="<%= list.web %>"><!--Pie Chart -->
-                                    <div class="ppc-progress">
+                                  
+                                  <div class="ppc-progress">
+                                     
                                         <div class="ppc-progress-fill2"></div>
                                     </div>
                                     <div class="ppc-percents2">
                                       <div class="pcc-percents-wrapper">
+                                          
                                           <span><%= list.web %>%</span>
                                       </div>
                                     </div>
@@ -112,6 +121,9 @@
                                 
                             </div>
                             <div class="statChartHolder">
+                              <div class="text">
+                                <h5>React</h5>
+                              </div>
                               <div class="progress-pie-chart3" data-percent="<%= list.react %>"><!--Pie Chart -->
                                   <div class="ppc-progress">
                                       <div class="ppc-progress-fill3"></div>
@@ -130,11 +142,19 @@
                       </div>  
                       <div id="info">
                           <div id="status">
-                          <p>Status :<small></small></p>
+                            <p id="text1">
+                              Status :
+                            </p>  
+                            <% if(list.web > 50 && list.dsa > 50 && list.react > 50 ) { %>
+                              <p id="text2">Passed</p>
+                            <% } else { %>
+                              <p  id="text3">Failed</p>
+                            <% } %>
+                          
                           </div>
                           <div id="interview">
                             <form action="/home/interview/<%= list.id%>" method="get">
-                              <button type="submit">Create interview</button>
+                              <button type="submit">View/Create interview</button>
                             </form>
                             
                             

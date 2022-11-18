@@ -2,6 +2,9 @@
 const mongoose = require('mongoose');
 
 const student_interview = new mongoose.Schema({
+    candidate : {
+        type: String,
+    },
     company : {
         type: String,
         required: true

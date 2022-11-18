@@ -4,21 +4,33 @@ $(function(){
   var $ppc2 = $(' .progress-pie-chart2')
   var $ppc3 = $(' .progress-pie-chart3')
 
-  percent1 = parseInt($ppc1.data('percent')),
-  percent2 = parseInt($ppc2.data('percent')),
-  percent3 = parseInt($ppc3.data('percent')),
-  
+  percent1 = parseInt($ppc1.data('percent'))
   deg1 = 360*percent1/100;
-  deg2 = 360*percent2/100;
-  deg3 = 360*percent3/100;
+ 
   if (percent1 > 50) {
     $ppc1.addClass('gt-50');
+  }else{
+    $ppc1.addClass('gt-49');
   }
+
+  percent2 = parseInt($ppc2.data('percent'))
+  deg2 = 360*percent2/100;
+  
+
   if (percent2 > 50) {
     $ppc2.addClass('gt-50');
+  }else{
+    $ppc2.addClass('gt-49');
   }
+
+
+  percent3 = parseInt($ppc3.data('percent'))
+  deg3 = 360*percent3/100;
+
   if (percent3 > 50) {
     $ppc3.addClass('gt-50');
+  }else{
+    $ppc3.addClass('gt-49');
   }
   
 

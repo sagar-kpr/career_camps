@@ -43,26 +43,43 @@ main #add-btn .form-data #form-box form {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 main #add-btn .form-data #form-box form #student-info {
   width: 50%;
-  border: 1px solid red;
 }
 
 main #add-btn .form-data #form-box form #student-info .common {
   display: flex;
   flex-direction: row;
   padding: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 main #add-btn .form-data #form-box form #student-info .common label {
-  width: 150px;
+  width: 40%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: start;
+}
+
+main #add-btn .form-data #form-box form #student-info .common input {
+  width: 40%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main .students {
+main #add-btn .form-data #form-box form #student-info .common button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .jobs-box {
   width: 80%;
   height: 80%;
   overflow: scroll;
@@ -70,7 +87,83 @@ main .students {
   scroll-behavior: smooth;
 }
 
-main .students .accordion .accordion-item .accordion-collapse .accordion-body {
+main .jobs-box h1 {
+  color: white;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+main .jobs-box .jobs-list {
+  width: 90%;
+  height: auto;
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  row-gap: 2px;
+}
+
+main .jobs-box .jobs-list .role {
+  width: 98%;
+  height: 60px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .jobs-box .jobs-list .role #category {
+  width: auto;
+  height: 40px;
+  border: 1px solid red;
+}
+
+main .jobs-box .jobs-list .role #category h3 {
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main .jobs-box .jobs-list .role #time {
+  width: 150px;
+  height: 40px;
+  border: 1px solid red;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main .jobs-box .jobs-list .company {
+  width: 98%;
+  height: 30px;
+  border: 1px solid red;
+}
+
+main .jobs-box .jobs-list .company p {
+  color: gray;
+}
+
+main .jobs-box .jobs-list .location {
+  width: 98%;
+  height: 30px;
+  border: 1px solid red;
+}
+
+main .jobs-box .jobs-list .location span {
+  color: gray;
+}
+
+main .jobs-box .jobs-list .requirement {
+  width: 98%;
+  height: 30px;
+  border: 1px solid red;
+}
+
+main .jobs-box .jobs-list .requirement #react {
+  width: 80px;
+  background-color: #e6ffe6;
+  color: #37833b;
+  text-align: center;
 }
