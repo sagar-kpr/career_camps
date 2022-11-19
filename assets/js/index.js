@@ -1,4 +1,36 @@
-$(function(){
+/*function pie(e){
+  console.log(e)
+  var fill = document.querySelectorAll(' .ppc-progress-fill1')
+  var chart = document.querySelectorAll(' .progress-pie-chart1');
+  for (let ppc1 of chart){
+    let val1 = ppc1.getAttribute('id')
+    if(val1 == e){
+      let percent1 = parseInt(ppc1.getAttribute('data-percent'))
+      let deg1 = (360*percent1/100);
+      let i = 0
+      if (percent1 > 50) {
+        ppc1.classList.add('gt-50');
+      }
+      for(let bar of fill){
+        let val2 = bar.getAttribute('id')
+        if(val2 == e){
+          let test = document.getElementsByTagName('section')[i]
+          test.style.transform = 'rotate('+ deg1 +'deg)'
+          test.style.color= "red"
+        }
+        i++
+      }
+       
+      //console.log(ppc1.getAttribute('id'))
+      //console.log(ppc1.children[0].children[0].getAttribute('id'))
+    }
+    
+
+
+  }
+}
+
+/*$(function(){
   console.log('hi',$(' .progress-pie-chart1') )
   var $ppc1 = $(' .progress-pie-chart1')
   var $ppc2 = $(' .progress-pie-chart2')
@@ -42,6 +74,49 @@ $(function(){
  // $('.ppc-percents2 span').html(percent2+'%');
  // $('.ppc-percents3 span').html(percent3+'%');
   
-});
+});*/
 
+
+
+var skillprogress = document.querySelectorAll(".skill-progress > div");
+var done = false;
+
+
+function initializebar(){
+    for(var bar of skillprogress){
+        bar.style.width = 0 + '%';
+        bar.setAttribute("done",false);
+    }
+    
+}
+
+
+
+function fillbar(bar){
+    let width = 0;
+    let target = bar.getAttribute('data-bar-width');
+
+    let interval = setInterval(function(){
+        if(width > target){
+            clearInterval(interval);
+        }
+        width++;
+        bar.style.width = width + "%";
+    } ,6);
+}
+
+function check(){
+    for(var bar of skillprogress){
+      initializebar();
+      //var coordinates = bar.getBoundingClientRect();
+      //verify(coordinates);
+      if (bar.getAttribute("done") == "false"){
+			    bar.setAttribute("done",true);	
+          fillbar(bar);
+      }else {
+          bar.setAttribute("done",false);
+          initializebar();
+      }
+    }
+}
 

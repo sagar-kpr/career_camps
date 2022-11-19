@@ -116,9 +116,16 @@ main{
                             display: flex;
                             flex-direction: column;
                             row-gap: 10px;
-                            p{
-                                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                margin: 2px; 
+                           // border: 1px solid red;
+                            align-items: center;
+                            
+                            #score-text{
+                                width:100%;
+                                //border: 1px solid red;
+                                p{
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    margin: 2px; 
+                                }
                             }
                             #course{
                                 width:90%;
@@ -126,116 +133,102 @@ main{
                                 justify-content: space-evenly;
                                 align-items: center;
                                 flex-direction: row;
-                                .progressDiv {
-                                    width: 84%;
-                                    background:white;
-                                    height: auto;
-                                    position: relative;
+                                flex-wrap: wrap;
+                             
+                                #dsa, #web, #react{
+                                    width:auto;
+                                    
                                     display: flex;
-                                    .statChartHolder {
-                                        width: 30%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+
+                                    .text{
+                                        width: auto;
                                         height: auto;
-                                        position: relative;
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
-                                        align-items: center;
-                                        .text{
-                                            width: 100px;
-                                            height: auto;
-                                            text-align: center;
-                                            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                        }
-                                        .progress-pie-chart1, .progress-pie-chart2 , .progress-pie-chart3 {
-                                            width:100px;
-                                            height: 100px;
-                                            border-radius: 50%;
-                                            background-color: #E5E5E5;
-                                            position: relative;
-                                            .ppc-progress {
-                                                content: "";
-                                                position: absolute;
-                                                border-radius: 50%;
-                                                left: calc(50% - 50px);
-                                                top: calc(50% - 50px);
-                                                width: 100px;
-                                                height: 100px;
-                                                clip: rect(0, 100px, 100px, 50px);
-                                                .ppc-progress-fill1, .ppc-progress-fill2, .ppc-progress-fill3 {
-                                                    content: "";
-                                                    position: absolute;
-                                                    border-radius: 50%;
-                                                    left: calc(50% - 50px);
-                                                    top: calc(50% - 50px);
-                                                    width: 100px;
-                                                    height: 100px;
-                                                    clip: rect(0, 50px, 100px, 0);
-                                                    background: #81CE97;
-                                                    transform: rotate(60deg);
-                                                  }
-                                            }
-                                            .ppc-percents1, .ppc-percents2, .ppc-percents3 {
-                                                content: "";
-                                                position: absolute;
-                                                border-radius: 50%;
-                                                left: calc(50% - 80px/2);
-                                                top: calc(50% - 80px/2);
-                                                width: 80px;
-                                                height: 80px;
-                                                background: #fff;
-                                                text-align: center;
-                                                display: table;
-                                                span {
-                                                    display: block;
-                                                    font-size: 1rem;
-                                                    font-weight: bold;
-                                                    color: #81CE97;
-                                                }
-                                                .pcc-percents-wrapper {
-                                                    display: table-cell;
-                                                    vertical-align: middle;
-                                                }
-                                                  
-                                            }
-                                              
-                                        }
-                                        .gt-50 {
-                                            background-color: #81CE97;
-                                            .ppc-progress {
-                                                clip: rect(0, 50px, 100px, 0);
-                                                .ppc-progress-fill1, .ppc-progress-fill2, .ppc-progress-fill3  {
-                                                    clip: rect(0, 100px, 100px, 50px);
-                                                    background: #E5E5E5;
-                                                  }
-                                            }
-                                        }
-                                        .gt-49 {
-                                            background-color: #ff6666;
-                                            .ppc-progress {
-                                                clip: rect(0, 50px, 100px, 0);
-                                                .ppc-progress-fill1, .ppc-progress-fill2, .ppc-progress-fill3  {
-                                                    clip: rect(0, 100px, 100px, 50px);
-                                                    background: #E5E5E5;
-                                                  }
-                                            }
-                                        }
-                                        
-                                        
+                                        text-align: center;
+                                        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                                     }
+    
+                                    .skills-display {
+                                        width: 90%;
+                                        padding: 10px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: space-evenly;
+                                    }
+                                    
+                                    .skill-progress {
+                                        width: 11rem;
+                                        height: 2.2rem;
+                                        background-color: #F0F2F5;
+                                        border-radius: 1rem;
+                                        box-shadow: 1px 1px 2px 1px #F0F2F5 inset;
+                                        margin: 25px;
+                                        overflow: hidden;
+                                        .m-blue {
+                                            color: #2857a4;
+                                        }
                                         
-                                }
-                                
-                                
+                                        .mb-blue {
+                                            background-color: #2857a4;
+                                        }
+                                        
+                                        .mb-orange {
+                                            background-color: #ec4d1c;
+                                        }
+                                        
+                                        .mb-teal {
+                                            background-color: #0b8176;
+                                        }
+                                        
+                                        .mb-light-purple {
+                                            background-color: #93738c;
+                                        }
+                                        
+                                        .fifty-percent {
+                                            height: inherit;
+                                            width: 50%;
+                                            position: relative;
+                                            .skill-name {
+                                                width: 120px;
+                                                position: absolute;
+                                               // border: 1px solid red;
+                                                top:0;
+                                                text-align: center;
+                                                span {
+                                                    color: white;
+                                                    font-size: 1.2rem;
+                                                    font-weight: 600;
+                                                }    
+                                            }
+                                        }
+                                    }
+                                    
+                                    .skill-progress > div {
+                                        border-radius: 20px 0px 0px 20px;
+                                        box-shadow: 1px 1px 5px 2px #F0F2F5;
+                                    }
+                                    
+                                    .skill-name span {
+                                        color: white;
+                                        font-size: 1rem;
+                                        margin-left: 10px;
+                                        vertical-align: middle;
+                                    }
+
+                                }                               
                             }
     
                         }
                         #info{
                             width:100%;
-                            
+                           
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
                             align-items: center;
+                            flex-wrap: wrap;
                             margin-top: 10px;
                             #status{
                                 width:auto;
@@ -284,6 +277,13 @@ main{
                                 }            
 
                             }
+                        }
+                        @media screen and (max-width:800px){
+                            #info{
+                                justify-content: center;
+                            }
+
+                            
                         }
                     }
                         
