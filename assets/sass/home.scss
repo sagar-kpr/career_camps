@@ -146,13 +146,13 @@ main{
                                             text-align: center;
                                             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                                         }
-                                        .progress-pie-chart1, .progress-pie-chart2 , .progress-pie-chart3 {
+                                        #progress-pie-chart1, #progress-pie-chart2 , #progress-pie-chart3 {
                                             width:100px;
                                             height: 100px;
                                             border-radius: 50%;
                                             background-color: #E5E5E5;
                                             position: relative;
-                                            .ppc-progress {
+                                            #ppc-progress {
                                                 content: "";
                                                 position: absolute;
                                                 border-radius: 50%;
@@ -161,7 +161,7 @@ main{
                                                 width: 100px;
                                                 height: 100px;
                                                 clip: rect(0, 100px, 100px, 50px);
-                                                .ppc-progress-fill1, .ppc-progress-fill2, .ppc-progress-fill3 {
+                                                #ppc-progress-fill1, #ppc-progress-fill2, #ppc-progress-fill3 {
                                                     content: "";
                                                     position: absolute;
                                                     border-radius: 50%;
@@ -174,7 +174,7 @@ main{
                                                     transform: rotate(60deg);
                                                   }
                                             }
-                                            .ppc-percents1, .ppc-percents2, .ppc-percents3 {
+                                            #ppc-percents1, #ppc-percents2, #ppc-percents3 {
                                                 content: "";
                                                 position: absolute;
                                                 border-radius: 50%;
@@ -191,7 +191,7 @@ main{
                                                     font-weight: bold;
                                                     color: #81CE97;
                                                 }
-                                                .pcc-percents-wrapper {
+                                                #pcc-percents-wrapper {
                                                     display: table-cell;
                                                     vertical-align: middle;
                                                 }

@@ -71,7 +71,7 @@
               <% if(list.id == stu) { %>
                 <div class="accordion-item m-3 rounded-3 ">
                   <h2 class="accordion-header" id="<%= list.rollnbr %>">
-                      <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-<%= list.id %>" aria-expanded="false" aria-controls="flush-<%= list.id %>">
+                      <button class="accordion-button collapsed rounded-3" type="button" onclick= "pie('<%= list.rollnbr %>')" data-bs-toggle="collapse" data-bs-target="#flush-<%= list.id %>" aria-expanded="false" aria-controls="flush-<%= list.id %>">
                         <%= list.student  %>
                       </button>
                   </h2>
@@ -89,12 +89,12 @@
                                 <div class="text">
                                   <h5>DSA</h5>
                                 </div>
-                                  <div class="progress-pie-chart1" data-percent="<%= list.dsa %>"><!--Pie Chart -->
-                                      <div class="ppc-progress">
-                                          <div class="ppc-progress-fill1"></div>
+                                  <div id="progress-pie-chart1"  data-percent="<%= list.dsa %>"><!--Pie Chart -->
+                                      <div id="ppc-progress">
+                                          <div id="ppc-progress-fill1"></div>
                                       </div>
-                                      <div class="ppc-percents1">
-                                        <div class="pcc-percents-wrapper">
+                                      <div id="ppc-percents1">
+                                        <div id="pcc-percents-wrapper">
                                             <span><%= list.dsa %>%</span>
                                         </div>
                                       </div>
@@ -105,14 +105,14 @@
                                 <div class="text">
                                   <h5>Web</h5>
                                 </div>
-                                <div class="progress-pie-chart2" data-percent="<%= list.web %>"><!--Pie Chart -->
+                                <div id="progress-pie-chart2"  data-percent="<%= list.web %>"><!--Pie Chart -->
                                   
-                                  <div class="ppc-progress">
+                                  <div id="ppc-progress">
                                      
-                                        <div class="ppc-progress-fill2"></div>
+                                        <div id="ppc-progress-fill2"></div>
                                     </div>
-                                    <div class="ppc-percents2">
-                                      <div class="pcc-percents-wrapper">
+                                    <div id="ppc-percents2">
+                                      <div id="pcc-percents-wrapper">
                                           
                                           <span><%= list.web %>%</span>
                                       </div>
@@ -124,12 +124,12 @@
                               <div class="text">
                                 <h5>React</h5>
                               </div>
-                              <div class="progress-pie-chart3" data-percent="<%= list.react %>"><!--Pie Chart -->
-                                  <div class="ppc-progress">
-                                      <div class="ppc-progress-fill3"></div>
+                              <div id="progress-pie-chart3" data-percent="<%= list.react %>"><!--Pie Chart -->
+                                  <div id="ppc-progress">
+                                      <div id="ppc-progress-fill3"></div>
                                   </div>
-                                  <div class="ppc-percents3">
-                                    <div class="pcc-percents-wrapper">
+                                  <div id="ppc-percents3">
+                                    <div id="pcc-percents-wrapper">
                                         <span><%= list.react %>%</span>
                                     </div>
                                   </div>
