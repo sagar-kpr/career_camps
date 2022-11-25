@@ -63,7 +63,7 @@
             </div>
         </div>
     </div>
-    <div class="students ">
+    <div class="students">
         <div class="accordion accordion-flush  " id="accordionFlushExample">
           <% let myStudents = locals.user.students %>
           <% for( list of lists) { %>
@@ -143,15 +143,15 @@
                             <% } %>
                           
                           </div>
+                          <div id="total-interviews">
+                              <span>Total Interviews: <%= list.interviews.length%></span>
+                          </div>
                           <div id="interview">
                             <form action="/home/interview/<%= list.id%>" method="get">
                               <button type="submit">View/Create interview</button>
                             </form>
-                            
-                            
                           </div>
                       </div>
-                      
                       </div>
                   </div>
                 </div>
@@ -159,7 +159,6 @@
             <% } %>  
           <% } %> 
         </div> 
-            
     </div>
     
 </main>

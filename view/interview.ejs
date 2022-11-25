@@ -2,27 +2,123 @@
 
 <link rel="stylesheet" type="text/css" href="/css/interview.css"> 
 
-<main>
-  <div id="interviews" >
-    <div id="text-box">
-      <h3>Upcoming interviews</h3>
+<main> 
+  <div id="add-btn" >
+    <p>
+        <a class="btn rounded-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Create interview
+        </a>
+    </p>
+    <div class="collapse form-data" id="collapseExample">
+        <div class="card card-body  rounded-3" id="form-box">
+            <form action="/home/interviewDetails/<%=profile.id%>" id="list-form" method="post">
+              <div id="student-info">
+            
+                <div class="common">
+                  <label for="company">Company -</label>
+                  <input type="text" placeholder="Company name" name="company"  required>
+                </div>
+                
+                <div class="common">
+                  <label for="title">Title</label>
+                  <input type="text" placeholder="Job roll"  name="title" required>
+                </div>
+
+                <div class="common">
+                  <label for="location">Location -</label>
+                    <select name="location">
+                      <option>Delhi</option>
+                      <option>Mumbai</option>
+                      <option>Banglore</option>
+                      <option>Noida</option>
+                      <option>Hyderabad</option>
+                      <option>Gurugram</option>
+                    </select>
+                </div>
+
+                <div class="common">
+                  <label for="working">Working -</label>
+                    <select name="working">
+                      <option>Full time</option>
+                      <option>Part time</option>
+                    </select>
+                </div>
+
+                <div class="common">
+                  <label for="date">Interview Date -</label>
+                  <input type="date"  name="date"  required>
+                </div>
+
+                <div class="common">
+                  <button type="submit">Add details</button>
+                </div>
+              </div>
+              
+            </form>
+          </div>
+            
+        </div>
     </div>
-    
-  </div>   
-  <div id="fetch" data-id="<%= profile.id%>" data-dsa="<%= profile.dsa %>" data-web="<%= profile.web %>" data-react="<%= profile.react %>">
-    <div id="fetch-btn">
-    
-        <button type="button" id="btn">view jobs</button>
-     
-    </div>
-    <div id="all-jobs">
+    <div class="interviews ">
       
+        <% for( job of jobsList){ %>
+          <% for(interview of profile.interviews) { %>
+            <% if(interview == job.id) { %>
+              <div class="interview-list" >
+                <div id="image">
+                  <img src="/images/camp.webp">
+                </div>
+                <div id="content">
+                  <div id="title">
+                    <div id="company-roll">
+                      <h3><%=job.title %></h3>
+                    </div>
+                    <div id="interview-date">
+                      <p>Interview date- <%=job.date %></p>
+                    </div>
+                  </div>
+                  <div id="details">
+                      <div id="company-name">
+                        <p><%=job.company %></p>
+                      </div>
+                      <div id="working-info">
+                        <div id="location">
+                          <p><i class="fa-solid fa-location-dot"></i> &nbsp <%=job.location %></p>
+                        </div>
+                        <div id="work-time">
+                          <p><i class="fa-solid fa-briefcase"></i> &nbsp <%=job.working %></p>
+                        </div>
+                      </div>
+                      <div id="others">
+                        <div id="skill">
+                          <%if(profile.dsa > 50) { %>
+                            <div id="dsa">
+                              <span>DSA</span>
+                            </div>
+                          <% } %>
+                          <%if(profile.web > 50) { %>
+                            <div id="web">
+                              <span>Web</span>
+                            </div>
+                          <% } %>
+                          <%if(profile.react > 50) { %>
+                            <div id="react">
+                              <span>React</span>
+                            </div>
+                          <% } %>
+                        </div>
+                        
+                      </div>
+                  </div>
+                </div>
+              </div>
 
+            <% }%>
+          <%} %>
+        <% } %>
+      
     </div>
 
-  </div>
-    
-    
-</main>
-<script src="/js/fetch.js"></script>
+</main>  
 
+  

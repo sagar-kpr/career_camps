@@ -1,6 +1,6 @@
 const StudentBasic = require('../models/student_basic_schema');
 const User = require('../models/schema');
-
+const StudentInterview = require('../models/student_interview');
 
 
 module.exports.basic = async function(req,res){
@@ -40,3 +40,27 @@ module.exports.basic = async function(req,res){
     }
 
 }    
+
+
+module.exports.interview = async function(req,res){
+    //console.log(req.params.id)
+    let user = await StudentBasic.findById(req.params.id)
+    if(user){
+        let interview = await StudentInterview.create({
+            company: req.body.company,
+            title:req.body.title,
+            location:req.body.location,
+            working: req.body.working,
+            date: req.body.date,
+            user: req.params.id
+        })
+
+        user.interviews.push(interview)
+        user.save();
+        console.log(user)
+        return res.redirect('back')
+
+    }
+    
+   
+}

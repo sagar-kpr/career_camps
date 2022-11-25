@@ -16,8 +16,6 @@
                     for(let i=0; i< 5; i++){
                         let list = await createDom(newdata[i])
                         $('#all-jobs').append(list)
-
-
                     }
                     $('#btn').prop('disabled',true);
                     $('#btn').css('opacity', '0.8')
@@ -38,7 +36,6 @@
             return $(`<div class="jobs-box ">
             <div id="img-box">
                 <img src="${data.company_logo}" >
-    
             </div>
             <div id="detail-box">
                 <div class="jobs-list">
@@ -66,13 +63,13 @@
                             <span>${data.tags[5]}</span>
                         </div>
                         <div class="apply" >
-                            <a href="#" >Apply</a>
+                            <a href="/home/create-interview/${data.id}/${id}" id="anchor-btn">Apply</a>
                         </div>
                     </div>
                 </div>
             </div>    
           </div>
-          `)
+          <script src="/js/create.js"></script>`)
             
 
         } else{

@@ -269,6 +269,22 @@ main .students .accordion .accordion-item .accordion-collapse .accordion-body #i
   font-size: 14px;
 }
 
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #info #total-interviews {
+  width: 130px;
+  height: 42px;
+  background-color: #DEF6FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .students .accordion .accordion-item .accordion-collapse .accordion-body #info #total-interviews span {
+  color: #49ADC5;
+  font-family: Mulish, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 main .students .accordion .accordion-item .accordion-collapse .accordion-body #info #interview {
   width: auto;
   height: 42px;

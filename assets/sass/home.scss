@@ -89,7 +89,6 @@ main{
         overflow: scroll;
         overflow-x: hidden;
         scroll-behavior: smooth;
-        
         .accordion{
             .accordion-item{
                 .accordion-header{
@@ -235,6 +234,7 @@ main{
                                 display:flex ;
                                 flex-direction: row;
                                 column-gap: 5px;
+                               // border: 1px solid red;
                                 #text1{
                                     text-align:center;
                                     margin-top: 10px;
@@ -260,12 +260,28 @@ main{
                                     font-size: 14px;
                                 }
                             }
+                            #total-interviews{
+                                width: 130px;
+                                height: 42px;
+                                background-color:#DEF6FC ;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                span{
+                                    color: #49ADC5;
+                                    font-family: Mulish, Roboto, "Helvetica Neue", sans-serif;;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                }
+                                //border: 1px solid red;
+                            }
                             #interview{
                                 width: auto; 
                                 height: 42px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                //border: 1px solid red;
                                 button{
                                     width:auto;
                                     height: 42px;
