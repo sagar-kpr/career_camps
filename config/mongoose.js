@@ -30,9 +30,6 @@ mongodb.connect(
       .toArray((err, data) => {
         if (err) throw err;
 
-        console.log('eww',data);
-        
-        // TODO: write data to CSV file
         fastcsv
           .write(data, { headers: true })
           .on("finish", function() {

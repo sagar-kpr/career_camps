@@ -92,6 +92,7 @@ main .students {
   overflow: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  margin-top: 20px;
 }
 
 main .students .accordion .accordion-item .accordion-header .accordion-button {

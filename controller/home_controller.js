@@ -12,6 +12,7 @@ module.exports.login = function(req,res){
 
 //create session for login user and give them access to home page
 module.exports.session =  function(req,res){
+    req.flash('success', "Login successfully ");
     return res.redirect('/home');
 
 }
@@ -35,11 +36,12 @@ module.exports.createUser = function(req,res){
         if(!user){
             User.create(req.body , function(err,user) {
                 if(err) { console.log('err in creating',err); return }
-
+                req.flash('success', 'Registered successfully');
                 return res.redirect('/');
             });
                 
         } else {
+            req.flash('error', 'Already Registered');
             return res.redirect('back');
         }
     })
@@ -59,6 +61,7 @@ module.exports.home = async function(req,res){
 module.exports.destroy = function(req,res){
     req.logout(function(err){
         if(err) { console.log('err in logout', err); return }
+        req.flash('success', "Logout successfully ");
         return res.redirect('/')
     });
 }
