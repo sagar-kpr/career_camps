@@ -64,7 +64,7 @@
         <div id="flush-${list._id}" class="accordion-collapse  collapse" aria-labelledby="${list.rollnbr}" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body ">
             <div id="details">
-                <p>Batch <small>${list.batch}</small></p>
+                <p>Batch :<small>${list.batch}</small></p>
                 <p>Collage name :<small>${list.collage}</small> </p>
             </div>
             <div id="score-card">
@@ -123,14 +123,14 @@
                     Status :
                   </p>  
                   <p id="text2">Passed</p>
-                  
+                </div>
+                <div id="total-interviews">
+                    <span>Total Interviews: ${list.interviews.length}</span>
                 </div>
                 <div id="interview">
                   <form action="/home/interview/${list._id}" method="get">
                     <button type="submit">View/Create interview</button>
-                  </form>
-                  
-                  
+                  </form>           
                 </div>
             </div>
             
@@ -148,7 +148,7 @@
         <div id="flush-${list._id}" class="accordion-collapse  collapse" aria-labelledby="${list.rollnbr}" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body ">
             <div id="details">
-                <p>Batch <small>${list.batch}</small></p>
+                <p>Batch :<small> ${list.batch}</small></p>
                 <p>Collage name :<small>${list.collage}</small> </p>
             </div>
             <div id="score-card">
@@ -208,6 +208,9 @@
                   </p>  
                   <p  id="text3">Failed</p>
                   
+                </div>
+                <div id="total-interviews">
+                    <span>Total Interviews: ${list.interviews.length}</span>
                 </div>
                 <div id="interview">
                   <form action="/home/interview/${list._id}" method="get">
