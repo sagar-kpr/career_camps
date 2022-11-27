@@ -2,27 +2,27 @@
 const mongoose = require('mongoose');
 
 const student_interview = new mongoose.Schema({
-    candidate : {
-        type: String,
-    },
     company : {
         type: String,
         required: true
     },
-    location: {
-        type: Number,
+    title: {
+        type: String,
         required: true,
-        unique: true
     },
-    apply:{
+    location: {
+        type: String,
+        required: true,
+    },
+    working:{
         type: String,
         required: true
     },
     date:{
-        type: Number,
+        type: String,
         required: true
     },
-    basics: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref : 'StudentBasic'
     }

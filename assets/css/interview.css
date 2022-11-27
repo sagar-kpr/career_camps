@@ -9,8 +9,550 @@ main {
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  /*#all-jobs{
+  row-gap: 30px;
+}
+
+main #add-btn {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+main #add-btn p a {
+  background-color: #f96b24;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data {
+  width: 97%;
+}
+
+main #add-btn .form-data #form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #add-btn .form-data #form-box form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+main #add-btn .form-data #form-box form #student-info {
+  width: 50%;
+}
+
+main #add-btn .form-data #form-box form #student-info .common {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: center;
+}
+
+main #add-btn .form-data #form-box form #student-info .common label {
+  width: 150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data #form-box form #student-info .common input, main #add-btn .form-data #form-box form #student-info .common select {
+  width: 50%;
+}
+
+main #add-btn .form-data #form-box form #student-info .common button {
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  margin-left: 25%;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data #form-box form #student-skills {
+  width: 50%;
+}
+
+main #add-btn .form-data #form-box form #student-skills .common {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+main #add-btn .form-data #form-box form #student-skills .common label {
+  width: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main #add-btn .form-data #form-box form #student-skills .common button {
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  margin-left: 25%;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .interviews {
+  width: 80%;
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+main .interviews .interview-list {
+  width: 97%;
+  height: 180px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .interviews .interview-list #image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin: 10px;
+  background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(#032d6b, #032d6b), linear-gradient(to left bottom, #032d6b 50%, #faf7f2 0px), linear-gradient(to right bottom, #032d6b 50%, #faf7f2 0px);
+  background-repeat: no-repeat;
+}
+
+main .interviews .interview-list #image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+main .interviews .interview-list #content {
+  width: 85%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+main .interviews .interview-list #content #title {
+  width: 99%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+main .interviews .interview-list #content #title #company-roll {
+  width: auto;
+  height: 100%;
+}
+
+main .interviews .interview-list #content #title #company-roll h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+main .interviews .interview-list #content #title #interview-date {
+  width: auto;
+  height: 100%;
+  margin-right: 10px;
+}
+
+main .interviews .interview-list #content #title #interview-date p {
+  color: #5A5B6A;
+  font-size: 15px;
+  text-align: center;
+}
+
+main .interviews .interview-list #content #details {
+  width: 99%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+main .interviews .interview-list #content #details #company-name {
+  width: 100%;
+  height: 22px;
+}
+
+main .interviews .interview-list #content #details #company-name p {
+  color: #5A5B6A;
+  font-size: 16px;
+}
+
+main .interviews .interview-list #content #details #working-info {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+
+main .interviews .interview-list #content #details #working-info #location, main .interviews .interview-list #content #details #working-info #work-time {
+  width: auto;
+}
+
+main .interviews .interview-list #content #details #working-info #location p, main .interviews .interview-list #content #details #working-info #work-time p {
+  color: #5A5B6A;
+  font-size: 16px;
+}
+
+main .interviews .interview-list #content #details #others {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+main .interviews .interview-list #content #details #others #skill {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
+}
+
+main .interviews .interview-list #content #details #others #skill #dsa {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DEF6FC;
+  color: #49ADC5;
+}
+
+main .interviews .interview-list #content #details #others #skill #dsa span {
+  text-align: center;
+}
+
+main .interviews .interview-list #content #details #others #skill #web {
+  width: 100px;
+  height: 30px;
+  background-color: #e6ffe6;
+  color: #37833b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .interviews .interview-list #content #details #others #skill #web span {
+  text-align: center;
+}
+
+main .interviews .interview-list #content #details #others #skill #react {
+  width: 100px;
+  height: 30px;
+  background-color: #ffe6e6;
+  color: #ff4d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .interviews .interview-list #content #details #others #skill #react span {
+  text-align: center;
+}
+
+main .interviews .interview-list #content #details #others #apply {
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #ec4d1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .interviews .interview-list #content #details #others #apply a {
+  color: #fb813e;
+  text-decoration: none;
+  font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
+}
+
+main .interviews .interview-list #content #details #others #apply:hover {
+  background-color: #ec4d1c;
+}
+
+main .interviews .interview-list #content #details #others #apply:hover a {
+  color: white;
+}
+
+main .interviews .interview-list #content #details #others #not-eligable {
+  width: 120px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #ffe6e6;
+  color: #ff4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
+}
+
+/*main{
+    width: 100%;
+    height: auto;
+    background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(rgb(3, 45, 107), rgb(3, 45, 107)), linear-gradient(to left bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px), linear-gradient(to right bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    #interviews{
+        width: 80%;
+        margin-top: 20px;
+        min-height: 120px;
+        max-height: 600px;
+        overflow: scroll;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        //border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        #text-box{
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            background-image: linear-gradient(-143deg, rgb(167, 89, 255) 0%, rgb(55, 165, 255) 100%);
+            //background: linear-gradient(to left, );
+        }
+        h3{
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
+        }
+    }
+    #fetch{
+        width: 80%;
+        margin-top: 20px;
+        height: 600px;
+        overflow: scroll;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        //border: 1px solid red;
+        #fetch-btn{
+            width: 100%;
+            //border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            button{
+                width: 100px;;
+                height: 40px;
+                border-radius: 5px;
+                //background-color: green;
+                background-image: linear-gradient(-143deg, rgb(167, 89, 255) 0%, rgb(55, 165, 255) 100%);
+                color: white;
+                border: none;                             
+                margin-top: 10px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+        }
+        #all-jobs{
+            width: 100%;
+            height: auto;
+            //border: 1px solid red;
+            .jobs-box{
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                align-items: center;
+                margin: 15px;
+                border-radius: 5px;
+                box-sizing: border-box;
+                box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.1);
+               //border: 1px solid red;
+                background-color: white;
+                #img-box{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 1px solid gray;
+                    margin: 5px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                #detail-box{
+                    width:80%;
+                    display: flex;
+                    .jobs-list{
+                        width:100%;
+                        height: auto;
+                        background-color: transparent;
+                        border-radius: 5px;
+                        margin: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 5px;
+                        font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
+                        .role{
+                            width: 98%;
+                            height: auto;
+                            //border: 1px solid red;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            #category{
+                                width: auto;
+                                height: auto;
+                               // border: 1px solid red;
+                                h3{
+                                    font-size: 1.3rem;
+                                    font-weight: 600;
+                                    //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                    margin: 0;
+            
+                                }
+                                
+                            }
+                            #time{
+                                width: auto;
+                                height: auto;
+                                color: #5A5B6A;
+                                font-size: 14px;
+                                text-align: center;
+                                
+                            }
+                        }
+                        .company{
+                            width: 98%;
+                            height: 20px;
+                            //border: 1px solid red;
+                            span{
+                                color: #5A5B6A;
+                                font-size: 14px;
+                                
+                            }
+                        }
+                        .location{
+                            width: 98%;
+                            height: 20px;
+                            //border: 1px solid red;
+                            span{
+                                color: #5A5B6A;
+                                font-size: 14px;
+                                font-family: Muli,sans-serif;
+                                margin-right: 10px;
+                                font-weight: 500;
+                            }
+                        }
+                        .requirement{
+                            width: 98%;
+                            height: 60px;
+                            //border: 1px solid red;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            #react{
+                                width: 100px;
+                                max-width: 150px;
+                                height: 35px;
+                                //border: 1px solid red;
+                                background-color: #DEF6FC ;
+                                color: #49ADC5;
+                                text-align: center;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                span{
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    font-family:  Mulish,Roboto,Helvetica Neue,sans-serif;
+                                }
+                            }
+                            .apply{
+                                width:100px;
+                                height: 35px;
+                                border-radius: 5px;
+                                border-radius: 5px;
+                                background-color: transparent;
+                                border: 2px solid #ec4d1c;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                a{
+                                    color: #fb813e;
+                                    text-decoration: none;
+                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                                }
+                                    
+                            }
+                            .apply:hover{
+                                background-color: #ec4d1c;
+                                a{
+                                    color: white;
+                                }
+                            }
+                            #not-eligable{
+                                width: 120px;;
+                                height: 35px;
+                                border-radius: 5px;
+                                background-color: #ffe6e6;
+                                color: #ff4d4d ;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                            }
+
+                        }
+                        
+            
+                    }
+
+                }
+                
+    
+            }
+        }
+
+    }
+
+    #all-jobs{
         width:80%;
         display: flex;
         justify-content: center;
@@ -29,8 +571,8 @@ main {
             }
         }
 
-    }  */
-  /*#fetch{
+    }  
+    #fetch{
         width:80%;
         height: 45%;
         overflow: scroll;
@@ -111,224 +653,7 @@ main {
 
         }
         
-    }*/
-}
+    }
+    
 
-main #interviews {
-  width: 80%;
-  margin-top: 20px;
-  min-height: 120px;
-  max-height: 600px;
-  overflow: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
-}
-
-main #interviews #text-box {
-  width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  background-image: linear-gradient(-143deg, #a759ff 0%, #37a5ff 100%);
-}
-
-main #interviews h3 {
-  text-align: center;
-  color: white;
-  font-size: 25px;
-  font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
-}
-
-main #fetch {
-  width: 80%;
-  margin-top: 20px;
-  height: 600px;
-  overflow: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-main #fetch #fetch-btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-main #fetch #fetch-btn button {
-  width: 100px;
-  height: 40px;
-  border-radius: 5px;
-  background-image: linear-gradient(-143deg, #a759ff 0%, #37a5ff 100%);
-  color: white;
-  border: none;
-  margin-top: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-main #fetch #all-jobs {
-  width: 100%;
-  height: auto;
-}
-
-main #fetch #all-jobs .jobs-box {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  align-items: center;
-  margin: 15px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-main #fetch #all-jobs .jobs-box #img-box {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 1px solid gray;
-  margin: 5px;
-}
-
-main #fetch #all-jobs .jobs-box #img-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box {
-  width: 80%;
-  display: flex;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list {
-  width: 100%;
-  height: auto;
-  background-color: transparent;
-  border-radius: 5px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 5px;
-  font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .role {
-  width: 98%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .role #category {
-  width: auto;
-  height: auto;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .role #category h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .role #time {
-  width: auto;
-  height: auto;
-  color: #5A5B6A;
-  font-size: 14px;
-  text-align: center;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .company {
-  width: 98%;
-  height: 20px;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .company span {
-  color: #5A5B6A;
-  font-size: 14px;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .location {
-  width: 98%;
-  height: 20px;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .location span {
-  color: #5A5B6A;
-  font-size: 14px;
-  font-family: Muli,sans-serif;
-  margin-right: 10px;
-  font-weight: 500;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement {
-  width: 98%;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement #react {
-  width: 100px;
-  max-width: 150px;
-  height: 35px;
-  background-color: #DEF6FC;
-  color: #49ADC5;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement #react span {
-  font-size: 14px;
-  font-weight: 700;
-  font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement .apply {
-  width: 100px;
-  height: 35px;
-  border-radius: 5px;
-  border-radius: 5px;
-  background-color: transparent;
-  border: 2px solid #ec4d1c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement .apply a {
-  color: #fb813e;
-  text-decoration: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement .apply:hover {
-  background-color: #ec4d1c;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement .apply:hover a {
-  color: white;
-}
-
-main #fetch #all-jobs .jobs-box #detail-box .jobs-list .requirement #not-eligable {
-  width: 120px;
-  height: 35px;
-  border-radius: 5px;
-  background-color: #ffe6e6;
-  color: #ff4d4d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+}*/

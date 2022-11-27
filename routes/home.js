@@ -8,5 +8,7 @@ const passport =require('passport');
 router.get('/', passport.checkAuthentication ,homeController.home )
 router.get('/interview/:id', passport.checkAuthentication, interviewController.inteview )
 router.post('/basicDetails', listController.basic);
+router.post('/interviewDetails/:id', listController.interview);
+
 
 module.exports = router;

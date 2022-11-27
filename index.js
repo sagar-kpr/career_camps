@@ -9,6 +9,8 @@ const passport = require('passport');
 const PassportLocal = require('./config/passport_local');
 const app = express();
 const parser = require('body-parser');
+const flash = require('connect-flash');
+const customMiddlware = require('./config/middleware');
 const sassMiddlware = require('node-sass-middleware');
 const expressLayout = require('express-ejs-layouts');
 const path = require('path');
@@ -48,6 +50,10 @@ app.use(MySession({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
+
+//use flash
+app.use(flash());
+app.use(customMiddlware.setflash);
 
 //use router
 app.use('/', require('./routes/index'));
