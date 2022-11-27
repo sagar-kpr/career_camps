@@ -71,7 +71,7 @@
               <% if(list.id == stu) { %>
                 <div class="accordion-item m-3 rounded-3 ">
                   <h2 class="accordion-header" id="<%= list.rollnbr %>">
-                      <button class="accordion-button collapsed rounded-3" type="button" onclick= "pie('<%= list.rollnbr %>')" data-bs-toggle="collapse" data-bs-target="#flush-<%= list.id %>" aria-expanded="false" aria-controls="flush-<%= list.id %>">
+                      <button class="accordion-button collapsed rounded-3" type="button" onclick='check()' data-bs-toggle="collapse" data-bs-target="#flush-<%= list.id %>" aria-expanded="false" aria-controls="flush-<%= list.id %>">
                         <%= list.student  %>
                       </button>
                   </h2>
@@ -82,63 +82,55 @@
                           <p>Collage name :<small> <%= list.collage %></small> </p>
                       </div>
                       <div id="score-card">
-                          <p>Score card :</p>
+                          <div id="score-text">
+                            <p>Score card :</p>
+                          </div>
                           <div id="course">
-                            <div class="progressDiv">
-                              <div class="statChartHolder">
+                            <div id="dsa">
                                 <div class="text">
                                   <h5>DSA</h5>
                                 </div>
-                                  <div id="progress-pie-chart1"  data-percent="<%= list.dsa %>"><!--Pie Chart -->
-                                      <div id="ppc-progress">
-                                          <div id="ppc-progress-fill1"></div>
+                                <div class="skills-display">
+                                  <div class="skill-progress" >
+                                    <div class="fifty-percent mb-blue"  data-bar-width='<%= list.dsa %>'>
+                                      <div class="skill-name">
+                                        <span><%= list.dsa %>% </span>
                                       </div>
-                                      <div id="ppc-percents1">
-                                        <div id="pcc-percents-wrapper">
-                                            <span><%= list.dsa %>%</span>
-                                        </div>
-                                      </div>
+                                    </div>
                                   </div>
-                                  
-                              </div>
-                              <div class="statChartHolder">
-                                <div class="text">
-                                  <h5>Web</h5>
-                                </div>
-                                <div id="progress-pie-chart2"  data-percent="<%= list.web %>"><!--Pie Chart -->
-                                  
-                                  <div id="ppc-progress">
-                                     
-                                        <div id="ppc-progress-fill2"></div>
-                                    </div>
-                                    <div id="ppc-percents2">
-                                      <div id="pcc-percents-wrapper">
-                                          
-                                          <span><%= list.web %>%</span>
-                                      </div>
-                                    </div>
-                                </div>
-                                
+                                </div> 
                             </div>
-                            <div class="statChartHolder">
+                            <div id="web">
                               <div class="text">
-                                <h5>React</h5>
+                                <h5>Web</h5>
                               </div>
-                              <div id="progress-pie-chart3" data-percent="<%= list.react %>"><!--Pie Chart -->
-                                  <div id="ppc-progress">
-                                      <div id="ppc-progress-fill3"></div>
-                                  </div>
-                                  <div id="ppc-percents3">
-                                    <div id="pcc-percents-wrapper">
-                                        <span><%= list.react %>%</span>
+                              <div class="skills-display">
+                                <div class="skill-progress" >
+                                  <div class="fifty-percent  mb-orange"  data-bar-width="<%= list.web %>">
+                                    <div class="skill-name">
+                                      <span><%= list.web %> % </span>
+
                                     </div>
                                   </div>
-                              </div>
-                              
-                          </div>
+                                </div>
+                              </div> 
+
                             </div>
-                              
-                          </div>
+                            <div id="react">
+                                <div class="text">
+                                  <h5>React</h5>
+                                </div>
+                                <div class="skills-display">
+                                  <div class="skill-progress" >
+                                    <div class="fifty-percent mb-teal"  data-bar-width='<%= list.react %>'>
+                                      <div class="skill-name">
+                                        <span><%= list.react %> % </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                            </div>                             
+                          </div> 
                       </div>  
                       <div id="info">
                           <div id="status">
@@ -174,4 +166,5 @@
 </main>
 
 <script src="/js/index.js"></script>
+
 <script src="/js/home_list.js"></script>

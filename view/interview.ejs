@@ -3,77 +3,26 @@
 <link rel="stylesheet" type="text/css" href="/css/interview.css"> 
 
 <main>
-    <div id="add-btn" >
-        <p>
-            <a class="btn rounded-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Add interview
-            </a>
-        </p>
-        <div class="collapse form-data" id="collapseExample">
-            <div class="card card-body  rounded-3" id="form-box">
-                <form action="/interview/interviewDetails" id="list-form" method="post">
-                  <div id="student-info">
-                    <div class="common">
-                      <label for="candidate">Candidate name</label>
-                      <input type="text" name="candidate" value="<%= profile.student %>" disabled >
-                    </div>
-
-                    <div class="common">
-                      <label for="company">Company Name</label>
-                      <input type="text" placeholder="Company" name="company"  required>
-                    </div>
-                    
-                    <div class="common">
-                      <label for="location">Location </label>
-                      <input type="text" placeholder="City"  name="location" required>
-                    </div>
-  
-                    <div class="common">
-                      <label for="apply">Applied for </label>
-                      <input type="text" placeholder="Job roll"  name="apply" required>
-                    </div>
-
-                    <div class="common">
-                      <label for="date">Interview Date</label>
-                      <input type="date"  name="date" required>
-                    </div>
-                    
-                    <div class="common">
-                      <button type="submit">Create</button>
-                    </div>
-                    
-                  </div>
-                </form>
-              </div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="jobs-box ">
-      <h1>All jobs</h1>
-      <div class="jobs-list">
-        <div class="role">
-          <div id="category">
-            <h3>Web Developer</h3>
-          </div>
-          <div id="time">
-            <p>nov 20/11/2022</p>
-          </div>
-        </div>
-        <div class="company">
-          <p>Coding Ninjas</p>
-        </div>
-        <div class="location">
-          <span>Noida</span>
-        </div>
-        <div class="requirement">
-          <div id="react">
-            <p>React</p>
-          </div>
-        </div>
-
-      </div>
-            
+  <div id="interviews" >
+    <div id="text-box">
+      <h3>Upcoming interviews</h3>
     </div>
     
+  </div>   
+  <div id="fetch" data-id="<%= profile.id%>" data-dsa="<%= profile.dsa %>" data-web="<%= profile.web %>" data-react="<%= profile.react %>">
+    <div id="fetch-btn">
+    
+        <button type="button" id="btn">view jobs</button>
+     
+    </div>
+    <div id="all-jobs">
+      
+
+    </div>
+
+  </div>
+    
+    
 </main>
+<script src="/js/fetch.js"></script>
+
