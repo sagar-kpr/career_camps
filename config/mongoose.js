@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URL);
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/studentDB");
 
 const db = mongoose.connection;
 
@@ -10,9 +10,9 @@ db.once('open', function(){
     console.log('student db connected to database');
 })
 
-/*const mongodb = require("mongodb").MongoClient;
+const mongodb = require("mongodb").MongoClient;
 
-let url =  process.env.MONGODB_URL;
+let url =   process.env.MONGODB_URL;
 const fastcsv = require('fast-csv')
 const fs = require('fs');
 const ws = fs.createWriteStream('student.csv');
@@ -24,7 +24,7 @@ mongodb.connect(
     if (err) throw err;
 
     client
-      .db('studentDB')
+      .db(process.env.MONGODB_URL)
       .collection("studentbasics")
       .find({})
       .toArray((err, data) => {
@@ -40,5 +40,5 @@ mongodb.connect(
         client.close();
       });
   }
-);*/
+);
 
