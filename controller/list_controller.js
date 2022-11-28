@@ -6,9 +6,7 @@ const StudentInterview = require('../models/student_interview');
 module.exports.basic = async function(req,res){
 
     let rollnbr = await StudentBasic.findOne({rollnbr: req.body.rollnbr});
-    console.log('re',rollnbr)
 
-    
     if(!rollnbr){
         let user = await StudentBasic.create({
             student: req.body.student,
@@ -35,7 +33,6 @@ module.exports.basic = async function(req,res){
         }    
 
     }else{
-        console.log('already exits')
         req.flash('error', 'Already exits');
         return res.redirect('back');
     }
@@ -59,7 +56,6 @@ module.exports.interview = async function(req,res){
 
         user.interviews.push(interview)
         user.save();
-        console.log(user)
         return res.redirect('back')
 
     }
