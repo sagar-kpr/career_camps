@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/studentDB');
+mongoose.connect(process.env.MONGODB_URL);
 
 const db = mongoose.connection;
 
@@ -12,7 +12,7 @@ db.once('open', function(){
 
 const mongodb = require("mongodb").MongoClient;
 
-let url = "mongodb://localhost/studentDB";
+let url = process.env.MONGODB_URL;
 const fastcsv = require('fast-csv')
 const fs = require('fs');
 const ws = fs.createWriteStream('student.csv');
