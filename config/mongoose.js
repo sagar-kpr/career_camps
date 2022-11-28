@@ -10,7 +10,7 @@ db.once('open', function(){
     console.log('student db connected to database');
 })
 
-const mongodb = require("mongodb").MongoClient;
+/*const mongodb = require("mongodb").MongoClient;
 
 let url =  process.env.MONGODB_URL;
 const fastcsv = require('fast-csv')
@@ -40,5 +40,5 @@ mongodb.connect(
         client.close();
       });
   }
-);
+);*/
 
