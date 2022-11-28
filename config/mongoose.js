@@ -12,7 +12,7 @@ db.once('open', function(){
 
 const mongodb = require("mongodb").MongoClient;
 
-let url = process.env.MONGODB_URL;
+let url =  process.env.MONGODB_URL;
 const fastcsv = require('fast-csv')
 const fs = require('fs');
 const ws = fs.createWriteStream('student.csv');
