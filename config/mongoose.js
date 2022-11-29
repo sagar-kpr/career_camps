@@ -12,7 +12,7 @@ db.once('open', function(){
 
 const mongodb = require("mongodb").MongoClient;
 
-let url =   "mongodb://localhost/studentDB"; //process.env.MONGODB_URL;
+let url = process.env.MONGODB_URL; //  "mongodb://localhost/studentDB";
 const fastcsv = require('fast-csv')
 const fs = require('fs');
 const ws = fs.createWriteStream('student.csv');
@@ -24,7 +24,7 @@ mongodb.connect(
     if (err) throw err;
 
     client
-      .db('studentDB')
+      .db(url)
       .collection("studentbasics")
       .find({})
       .toArray((err, data) => {
