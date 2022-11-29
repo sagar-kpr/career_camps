@@ -46,7 +46,7 @@ app.use(MySession({
         maxAge: (1000*60*100)
     },
     store : mongostore.create({
-        mongoUrl : process.env.MONGODB_URL, //'mongodb://localhost/students',
+        mongoUrl : 'mongodb://localhost/students', //process.env.MONGODB_URL
         autoRemove: 'disabled'
     })
 }));

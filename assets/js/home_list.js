@@ -10,15 +10,35 @@
                 url : '/home/basicDetails',
                 data : listForm.serialize(),
                 success: function(data){
-                  var newList = createListDom(data.data.lists);
-                  notySuccess('Student added successfully')
-                  $('#accordionFlushExample').prepend(newList)
-                  $('#myname').val('');
-                  $('#myroll').val('');
-                  $('#mycollage').val('');
-                  $('#myweb').val('');
-                  $('#mydsa').val('');
-                  $('#myreact').val('');
+                  if(data.data.message == 'found'){
+                    var newList = createListDom(data.data.lists);
+                    notySuccess('Student added successfully')
+                    $('#accordionFlushExample').prepend(newList)
+                    $('#myname').val('');
+                    $('#myroll').val('');
+                    $('#mycollage').val('');
+                    $('#myweb').val('');
+                    $('#mydsa').val('');
+                    $('#myreact').val('');
+
+                  }else if(data.data.message == 'not-found'){
+                    notyError('Student already exits')
+                    $('#myname').val('');
+                    $('#myroll').val('');
+                    $('#mycollage').val('');
+                    $('#myweb').val('');
+                    $('#mydsa').val('');
+                    $('#myreact').val('');
+                  }else{
+                    notyError('*Score cannot be Negative or Greater <br> *Rollnbr must be positive')
+                    $('#myname').val('');
+                    $('#myroll').val('');
+                    $('#mycollage').val('');
+                    $('#myweb').val('');
+                    $('#mydsa').val('');
+                    $('#myreact').val('');
+                  }
+                  
                 },
                 error: function(error){
                     console.log('err', error)
@@ -34,23 +54,20 @@
           theme: 'semanticui',
           text : text,
           type: 'success',
-          timeout : 300,
+          timeout : 500,
           layout : 'topRight'
       }).show();
-  }
+    }
 
-  let notyError = function(text){
-    new Noty({
-        theme: 'semanticui',
-        text : text,
-        type: 'error',
-        timeout : 300,
-        layout : 'topRight'
-    }).show();
-}
-
-
-
+    let notyError = function(text){
+      new Noty({
+          theme: 'semanticui',
+          text : text,
+          type: 'error',
+          timeout : 1000,
+          layout : 'topRight'
+      }).show();
+    }
 
     let createListDom = function(list){
 
@@ -136,7 +153,46 @@
             
             </div>
         </div>
-      </div>`)
+      </div>
+      <script>  
+          var skillprogress = document.querySelectorAll(".skill-progress > div");
+          var done = false;
+          function initializebar(){
+            for(var bar of skillprogress){
+                bar.style.width = 0 + '%';
+                bar.setAttribute("done",false);
+            } 
+          }
+          function fillbar(bar){
+            let width = 0;
+            let target = bar.getAttribute('data-bar-width');
+
+            let interval = setInterval(function(){
+                if(width > target){
+                    clearInterval(interval);
+                }
+                width++;
+                bar.style.width = width + "%";
+            } ,6);
+          }
+
+          function check(){
+            for(var bar of skillprogress){
+              initializebar();
+              //var coordinates = bar.getBoundingClientRect();
+              //verify(coordinates);
+              if (bar.getAttribute("done") == "false"){
+                  bar.setAttribute("done",true);	
+                  fillbar(bar);
+              }else {
+                  bar.setAttribute("done",false);
+                  initializebar();
+              }
+            }
+          }
+      </script>
+      
+      `)
 
       }else{
         return $(`<div class="accordion-item m-3 rounded-3 ">
@@ -222,7 +278,54 @@
             
             </div>
         </div>
-      </div>`)
+      </div>
+      <script>  
+          var skillprogress = document.querySelectorAll(".skill-progress > div");
+          var done = false;
+
+
+          function initializebar(){
+            for(var bar of skillprogress){
+                bar.style.width = 0 + '%';
+                bar.setAttribute("done",false);
+            }
+            
+          }
+
+
+
+          function fillbar(bar){
+            let width = 0;
+            let target = bar.getAttribute('data-bar-width');
+
+            let interval = setInterval(function(){
+                if(width > target){
+                    clearInterval(interval);
+                }
+                width++;
+                bar.style.width = width + "%";
+            } ,6);
+          }
+
+          function check(){
+            for(var bar of skillprogress){
+              initializebar();
+              //var coordinates = bar.getBoundingClientRect();
+              //verify(coordinates);
+              if (bar.getAttribute("done") == "false"){
+                  bar.setAttribute("done",true);	
+                  fillbar(bar);
+              }else {
+                  bar.setAttribute("done",false);
+                  initializebar();
+              }
+            }
+          }
+
+      
+      </script>
+      
+      `)
 
       }
        

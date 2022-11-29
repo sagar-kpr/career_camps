@@ -52,7 +52,7 @@ main{
             position: relative;
             //border: 1px solid white;
             form{
-                width: auto;
+                width:100%;
                 height: auto;
                 display: flex;
                 align-items: center;
@@ -117,4 +117,15 @@ main{
         }
     }
 
+}
+
+
+@media screen and (max-width:350px) {
+    main #login-box #login-form form input{
+        width: 90%;
+    }
+    main #login-box #login-form form button{
+        width: 90%;
+    }
+    
 }

@@ -29,6 +29,7 @@ main{
         .form-data{
             width: 97%;
             #form-box{
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -38,6 +39,7 @@ main{
                     flex-direction: row;
                     #student-info{
                         width: 50%;
+            
                         .common{
                             display: flex;
                             flex-direction: row;
@@ -45,6 +47,7 @@ main{
                             padding: 5px;
                             label{
                                 width:100px;
+                                min-width: 80px;
                                 font-family:Verdana, Geneva, Tahoma, sans-serif;
                             }
                             
@@ -53,6 +56,7 @@ main{
                     }
                     #student-skills{
                         width: 50%;
+               
                         .common{
                             display: flex;
                             flex-direction: row;
@@ -60,6 +64,7 @@ main{
                             
                             label{
                                 width:100px;
+                                min-width: 80px;
                                 font-family:Verdana, Geneva, Tahoma, sans-serif;
                             }
                             button{
@@ -77,10 +82,12 @@ main{
                             
                         }
                     }
-                    
+                     
                 }
                 
+                
             }
+            
         }
     }    
     .students{
@@ -106,6 +113,7 @@ main{
                         flex-direction: column;
                         #details{
                             width:100%;
+    
                             p{
                                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                                 margin: 2px;
@@ -114,6 +122,7 @@ main{
                         #score-card{
                             width:100%;
                             display: flex;
+                    
                             flex-direction: column;
                             row-gap: 10px;
                            // border: 1px solid red;
@@ -223,7 +232,6 @@ main{
                         }
                         #info{
                             width:100%;
-                           
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
@@ -232,13 +240,15 @@ main{
                             margin-top: 10px;
                             #status{
                                 width:auto;
+                                height: auto;
                                 display:flex ;
                                 flex-direction: row;
                                 column-gap: 5px;
-                               // border: 1px solid red;
+                          
                                 #text1{
                                     text-align:center;
                                     margin-top: 10px;
+                                   
                                 }
                                 #text2{
                                     margin-top: 15px;
@@ -274,7 +284,6 @@ main{
                                     font-weight: 600;
                                     font-size: 14px;
                                 }
-                                //border: 1px solid red;
                             }
                             #interview{
                                 width: auto; 
@@ -282,7 +291,6 @@ main{
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                //border: 1px solid red;
                                 button{
                                     width:auto;
                                     height: 42px;
@@ -295,13 +303,7 @@ main{
 
                             }
                         }
-                        @media screen and (max-width:800px){
-                            #info{
-                                justify-content: center;
-                            }
-
-                            
-                        }
+                        
                     }
                         
                 }
@@ -310,4 +312,64 @@ main{
     }
     
 
+}
+
+
+
+@media screen and (max-width:825px) {
+    main #add-btn .form-data #form-box form{
+        flex-direction: column;
+        align-items: center;
+        #student-skills, #student-info{
+            width:70%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:605px) {
+    main #add-btn .form-data #form-box form{
+        #student-skills, #student-info{
+            width:90%;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    main #add-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    main .students{
+        width: 100%;
+    }
+   
+    main #add-btn .form-data #form-box form{
+        width: 100%;
+    }
+    main #add-btn .form-data #form-box form #student-info .common{
+        flex-direction: column;
+    }
+    main #add-btn .form-data #form-box form #student-skills .common{
+        flex-direction: column;
+        button{
+            width: 100%;
+            margin-left:0px;
+        }
+    }
+    main #add-btn .form-data #form-box form #student-info .common input{
+        width:100%;
+    }
+    main #add-btn .form-data #form-box form #student-skills .common input{
+        width:100%;
+    }
+    main .students .accordion .accordion-item .accordion-collapse .accordion-body #info{
+        justify-content: flex-start;
+        #interview{
+            margin-top: 16px;
+        }
+
+        
+    }
 }
