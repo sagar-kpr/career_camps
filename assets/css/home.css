@@ -168,9 +168,9 @@ main .students .accordion .accordion-item .accordion-collapse .accordion-body #s
 main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course #dsa .skill-progress, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course #web .skill-progress, main .students .accordion .accordion-item .accordion-collapse .accordion-body #score-card #course #react .skill-progress {
   width: 11rem;
   height: 2.2rem;
-  background-color: #F0F2F5;
+  background-color: #d9dcde;
   border-radius: 1rem;
-  box-shadow: 1px 1px 2px 1px #F0F2F5 inset;
+  box-shadow: 1px 1px 2px 1px #d9dcde inset;
   margin: 25px;
   overflow: hidden;
 }
