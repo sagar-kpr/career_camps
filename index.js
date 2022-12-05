@@ -1,6 +1,7 @@
 const express = require('express');
 //const cookieParser = require('cookie-parser');
 const port = 3000;
+const env = require('./config/environment');
 const db = require('./config/mongoose');
 const MySession = require('express-session'); 
 const mongostore = require('connect-mongo');
@@ -8,6 +9,7 @@ const passport = require('passport');
 
 const PassportLocal = require('./config/passport_local');
 const app = express();
+const logger = require('morgan');
 const parser = require('body-parser');
 const flash = require('connect-flash');
 const customMiddlware = require('./config/middleware');
@@ -16,6 +18,8 @@ const expressLayout = require('express-ejs-layouts');
 const path = require('path');
 
 
+
+app.use(logger(env.morgan.mode, env.morgan.option));
 
 app.use(sassMiddlware({
     src: path.join(__dirname, './assets','sass'),
@@ -42,7 +46,7 @@ app.use(MySession({
         maxAge: (1000*60*100)
     },
     store : mongostore.create({
-        mongoUrl : 'mongodb://localhost/students',
+        mongoUrl :process.env.MONGODB_URL, // 'mongodb://localhost/students'
         autoRemove: 'disabled'
     })
 }));

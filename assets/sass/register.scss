@@ -99,19 +99,31 @@ main{
             }
         }
     }
-    @media screen and (max-width: 800px){
-        #animate-image{
-            display: none;
-        }
-        #login-box{
+    
+
+}
+
+@media screen and (max-width: 800px){
+    main #animate-image{
+        display: none;
+    }
+    main #login-box{
+        width: 100%;
+        #login-form{
             width: 100%;
-            #login-form{
-                width: 100%;
-            }
-            
         }
-        
         
     }
+    
+    
+}
 
+@media screen and (max-width:350px) {
+    main #login-box #login-form form input{
+        width: 90%;
+    }
+    main #login-box #login-form form button{
+        width: 90%;
+    }
+    
 }

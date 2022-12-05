@@ -62,3 +62,9 @@ header #log-out form input {
 header #log-out form input:hover {
   color: gray;
 }
+
+@media screen and (max-width: 500px) {
+  header #local {
+    display: none;
+  }
+}

@@ -1,9 +1,10 @@
-
+/* This function is not in use now (Fetching online jobs):::::::
 {
     let dsa = $('#fetch').data('dsa')
     let web = $('#fetch').data('web')
     let react = $('#fetch').data('react')
     let id = $('#fetch').data('id') 
+
     let jobsApi =  function(){
         let btn = $('#btn')
         btn.click(function(e){
@@ -119,4 +120,4 @@
     jobsApi()
 }
 
-
+*/

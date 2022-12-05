@@ -49,37 +49,11 @@
                             justify-content: center;
                             //border: 1px solid pink;
                             label{
-                                width: 150px;
+                                width: 220px;
                                 font-family:Verdana, Geneva, Tahoma, sans-serif;
                             }
                             input, select{
-                                width:50%;
-                            }
-                            button{
-                                width:auto;
-                                height: 40px;
-                                border-radius: 5px;
-                                background-color: green;
-                                color: white;
-                                border: none;
-                                margin-left: 25%;
-                                margin-top: 10px;
-                                font-family:Verdana, Geneva, Tahoma, sans-serif;
-                            }
-                            
-                            
-                        }
-                    }
-                    #student-skills{
-                        width: 50%;
-                        .common{
-                            display: flex;
-                            flex-direction: row;
-                            padding: 5px;
-                            
-                            label{
-                                width:100px;
-                                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                                width:100%;
                             }
                             button{
                                 width:auto;
@@ -108,11 +82,9 @@
         overflow: scroll;
         overflow-x: hidden;
         scroll-behavior: smooth;
-        //border: 1px solid red;
-
         .interview-list{
             width:97%;
-            height: 180px;
+            height: auto;
             background-color: white;
             border-radius: 5px;
             margin: 20px;
@@ -137,8 +109,8 @@
             #content{
                 width: 85%;
                 height: auto;
-                //border: 1px solid green;
                 display: flex;
+                border-radius: 5px;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
@@ -178,7 +150,7 @@
                 #details{
                     width:99%;
                     height: auto;
-                    //border: 1px solid red;
+                 
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -187,7 +159,7 @@
                     #company-name{
                         width: 100%;
                         height: 22px;
-                        //border: 1px solid red;
+                      
                         p{
                             color: #5A5B6A;
                             font-size: 16px;
@@ -214,13 +186,13 @@
                     #others{
                         width: 100%;
                         height: auto;
-                        //border: 1px solid red;
+                       // border: 1px solid red;
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
                         flex-wrap: wrap;
-                        margin-top: 10px;
+                        margin: 10px;
                         #skill{
                             width:80%;
                             height: 100%;
@@ -270,376 +242,104 @@
                                 }
                             }
                         }
-                        #apply{
-                            width:100px;
-                            height: 35px;
-                            border-radius: 5px;
-                            border-radius: 5px;
-                            background-color: transparent;
-                            border: 1px solid #ec4d1c;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            a{
-                                color: #fb813e;
-                                text-decoration: none;
-                                font-family:  Mulish,Roboto,Helvetica Neue,sans-serif;
-                            }
-                                
-                        }
-                        #apply:hover{
-                            background-color: #ec4d1c;
-                            a{
-                                color: white;
-                            }
-                        }
-                        #not-eligable{
-                            width: 120px;;
-                            height: 35px;
-                            border-radius: 5px;
-                            background-color: #ffe6e6;
-                            color: #ff4d4d ;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            text-align: center;
-                            font-family:  Mulish,Roboto,Helvetica Neue,sans-serif;
-                        }
-
+                       
                     }
                 }
             }
         }
     }     
 }     
-/*main{
-    width: 100%;
-    height: auto;
-    background-image: url(https://files.codingninjas.com/circut-9740.png), linear-gradient(rgb(3, 45, 107), rgb(3, 45, 107)), linear-gradient(to left bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px), linear-gradient(to right bottom, rgb(3, 45, 107) 50%, rgb(250, 247, 242) 0px);
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    #interviews{
-        width: 80%;
-        margin-top: 20px;
-        min-height: 120px;
-        max-height: 600px;
-        overflow: scroll;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        //border: 1px solid red;
-        display: flex;
+
+
+@media screen and (max-width:825px) {
+    main #add-btn .form-data #form-box form{
         flex-direction: column;
-        #text-box{
-            width: 100%;
-            height: 40px;
-            border-radius: 5px;
-            background-image: linear-gradient(-143deg, rgb(167, 89, 255) 0%, rgb(55, 165, 255) 100%);
-            //background: linear-gradient(to left, );
-        }
-        h3{
-            text-align: center;
-            color: white;
-            font-size: 25px;
-            font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
-        }
-    }
-    #fetch{
-        width: 80%;
-        margin-top: 20px;
-        height: 600px;
-        overflow: scroll;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        //border: 1px solid red;
-        #fetch-btn{
-            width: 100%;
-            //border: 1px solid red;
-            display: flex;
-            justify-content: center;
-            button{
-                width: 100px;;
-                height: 40px;
-                border-radius: 5px;
-                //background-color: green;
-                background-image: linear-gradient(-143deg, rgb(167, 89, 255) 0%, rgb(55, 165, 255) 100%);
-                color: white;
-                border: none;                             
-                margin-top: 10px;
-                font-family:Verdana, Geneva, Tahoma, sans-serif;
-            }
-        }
-        #all-jobs{
-            width: 100%;
-            height: auto;
-            //border: 1px solid red;
-            .jobs-box{
-                display: flex;
-                flex-direction: row;
-                width: auto;
-                align-items: center;
-                margin: 15px;
-                border-radius: 5px;
-                box-sizing: border-box;
-                box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.1);
-               //border: 1px solid red;
-                background-color: white;
-                #img-box{
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
-                    border: 1px solid gray;
-                    margin: 5px;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 50%;
-                        object-fit: cover;
-                    }
-                }
-                #detail-box{
-                    width:80%;
-                    display: flex;
-                    .jobs-list{
-                        width:100%;
-                        height: auto;
-                        background-color: transparent;
-                        border-radius: 5px;
-                        margin: 10px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        row-gap: 5px;
-                        font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
-                        .role{
-                            width: 98%;
-                            height: auto;
-                            //border: 1px solid red;
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: space-between;
-                            #category{
-                                width: auto;
-                                height: auto;
-                               // border: 1px solid red;
-                                h3{
-                                    font-size: 1.3rem;
-                                    font-weight: 600;
-                                    //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                    margin: 0;
-            
-                                }
-                                
-                            }
-                            #time{
-                                width: auto;
-                                height: auto;
-                                color: #5A5B6A;
-                                font-size: 14px;
-                                text-align: center;
-                                
-                            }
-                        }
-                        .company{
-                            width: 98%;
-                            height: 20px;
-                            //border: 1px solid red;
-                            span{
-                                color: #5A5B6A;
-                                font-size: 14px;
-                                
-                            }
-                        }
-                        .location{
-                            width: 98%;
-                            height: 20px;
-                            //border: 1px solid red;
-                            span{
-                                color: #5A5B6A;
-                                font-size: 14px;
-                                font-family: Muli,sans-serif;
-                                margin-right: 10px;
-                                font-weight: 500;
-                            }
-                        }
-                        .requirement{
-                            width: 98%;
-                            height: 60px;
-                            //border: 1px solid red;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                            align-items: center;
-                            #react{
-                                width: 100px;
-                                max-width: 150px;
-                                height: 35px;
-                                //border: 1px solid red;
-                                background-color: #DEF6FC ;
-                                color: #49ADC5;
-                                text-align: center;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                span{
-                                    font-size: 14px;
-                                    font-weight: 700;
-                                    font-family:  Mulish,Roboto,Helvetica Neue,sans-serif;
-                                }
-                            }
-                            .apply{
-                                width:100px;
-                                height: 35px;
-                                border-radius: 5px;
-                                border-radius: 5px;
-                                background-color: transparent;
-                                border: 2px solid #ec4d1c;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                a{
-                                    color: #fb813e;
-                                    text-decoration: none;
-                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
-                                }
-                                    
-                            }
-                            .apply:hover{
-                                background-color: #ec4d1c;
-                                a{
-                                    color: white;
-                                }
-                            }
-                            #not-eligable{
-                                width: 120px;;
-                                height: 35px;
-                                border-radius: 5px;
-                                background-color: #ffe6e6;
-                                color: #ff4d4d ;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                text-align: center;
-                                font-family:Verdana, Geneva, Tahoma, sans-serif;
-                            }
-
-                        }
-                        
-            
-                    }
-
-                }
-                
-    
-            }
-        }
-
-    }
-
-    #all-jobs{
-        width:80%;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        #fetch-btn{
-            width: auto;
-            button{
-                width: auto;
-                height: auto;
-                border-radius: 5px;
-                background-color: #f96b24;
-                color: white;
-                border: none;                             
-                margin-top: 10px;
-                font-family:Verdana, Geneva, Tahoma, sans-serif;
-            }
+        #student-info{
+            width:70%;
         }
+    }
+}
 
-    }  
-    #fetch{
-        width:80%;
-        height: 45%;
-        overflow: scroll;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        //border: 1px solid red;
-        h1{
-            color: white;
-        }
-        .jobs-box{
-            .jobs-list{
-                width:90%;
-                height: auto;
-                background-color: aliceblue;
-                border-radius: 5px;
-                margin: 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                row-gap: 2px;
-                .role{
-                    width: 98%;
-                    height: 60px;
-                    border: 1px solid red;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    #category{
-                        width: auto;
-                        height: 40px;
-                        border: 1px solid red;
-                        h3{
-                            font-size: 1.5rem;
-                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-                        }
-                        
-                    }
-                    #time{
-                        width: 150px;
-                        height: 40px;
-                        border: 1px solid red;
-                        text-align: center;
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    }
-                }
-                .company{
-                    width: 98%;
-                    height: 30px;
-                    border: 1px solid red;
-                    p{
-                        color: gray;
-                    }
-                }
-                .location{
-                    width: 98%;
-                    height: 30px;
-                    border: 1px solid red;
-                    span{
-                        color: gray;
-                    }
-                }
-                .requirement{
-                    width: 98%;
-                    height: 30px;
-                    border: 1px solid red;
-                    #react{
-                        width: 80px;
-                        background-color: #e6ffe6 ;
-                        color: #37833b;
-                        text-align: center;
-                    }
-                }
-                
-    
-            }
 
+
+@media screen and (max-width:605px) {
+    main #add-btn .form-data #form-box form{
+        #student-info{
+            width:90%;
         }
+    }
+}
+
+@media screen and (max-width:500px) {
+    main #add-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    main .students{
+        width: 100%;
+    }
+   
+    main #add-btn .form-data #form-box form{
+        width: 100%;
+    }
+    main #add-btn .form-data #form-box form #student-info .common{
+        flex-direction: column;
+        button{
+            width: 100%;
+            margin-left:0px;
+        }
+    }
+    main #add-btn .form-data #form-box form #student-info .common input{
+        width:100%;
+    }
+    main .interviews{
+        width: 100%;
+        border-radius: 0;
+    }
+    main .interviews .interview-list{
+        justify-content: center;
+        height: auto;
+        border-radius: 0;
         
     }
-    
+    main .interviews .interview-list #image{
+        display: none;
+    }
+    main .interviews .interview-list #content{
+        row-gap: 0;
+    }
+    main .interviews .interview-list #content #title{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    main .interviews .interview-list #content #title #company-roll{
+        h3{
+            font-size: 1.15rem;
+            margin: 0;
+        }
+    }
+    main .interviews .interview-list #content #title #interview-date p{
+        font-size: 13px;
+        margin: 0;
+    }
+    main .interviews .interview-list #content #details #company-name{
+        text-align: center;
+    }
+    main .interviews .interview-list #content #details #working-info{
+        justify-content: center;
+        column-gap: 10px;
+        //border: 1px solid red;
+        #location, #work-time{
+            text-align: center;
+           // border: 1px solid red;
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}    
 
-}*/
+
