@@ -1,6 +1,6 @@
 const express = require('express');
 //const cookieParser = require('cookie-parser');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const env = require('./config/environment');
 const db = require('./config/mongoose');
 const MySession = require('express-session'); 
